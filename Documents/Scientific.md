@@ -6,15 +6,21 @@
 
 ## Markdown
 
-<img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_MD.png" alt="Markdown" style="zoom:33%;" />
-
+<div>
+	<center>
+	<img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_MD.png"
+    	alt="Markdown" 
+    	style="zoom:33%;" />
+    </br>
+    Markdown Logo
+</div>
 ### 简介
 
 很多人想到起草文稿或者记笔记肯定会先想到 Microsoft Office 系列的 Word、One Note、记事本等，但是 Word 实际是属于相对正式的排版软件而非码字软件，会让人觉得有些不顺手也很正常（各种很血压的情况大家也应该遇到不少）；而用系统自带的记事本或写字板，功能不齐全，插图打代码什么的也不方便；Notability 好用是真好用，但也不是所有人都能有 iPad（也不是所有人能能喜欢在 iPad 上手写），如果是纯 PC 党或者需要带代码高亮等情况就很不适合。
 
 在此，隆重推荐最适合码字的工具：**Markdown**
 
-MarkDown 属于轻量级的标记语言，通过纯文本格式编写并生成可实时预览的 HTML 文档，而且对图片、表格、公式、超链接、代码高亮皆有支持（部分功能不是所有编辑器都有）。目前很多网站和论坛也支持使用 Markdown 编辑，如 GitHub、CSDN、简书、Reddit 等。大部分编辑器也都是免费甚至是开源的，对学生而言十分友好。另外其语法十分简单，如用 `#` 和多个 `#` 表示不同大纲等级的标题；用 `-` 表示无序列表，用 `* ... *` 和 `** ... **` 表示斜体和粗体，用 `![图片标题](超链接)` 引用图片（部分编辑器还支持本地图片引用）等，上手极快。
+MarkDown 属于轻量级的标记语言，通过纯文本格式编写并生成可实时预览的 XHTML 文档，而且对图片、表格、公式、超链接、代码高亮皆有支持（部分功能不是所有编辑器都有）。目前很多网站和论坛也支持使用 Markdown 编辑，如 GitHub、CSDN、简书、Reddit 等。大部分编辑器也都是免费甚至是开源的，对学生而言十分友好。另外其语法十分简单，如用 `#` 和多个 `#` 表示不同大纲等级的标题；用 `-` 表示无序列表，用 `* ... *` 和 `** ... **` 表示斜体和粗体，用 `![图片标题](超链接)` 引用图片（部分编辑器还支持本地图片引用）等，上手极快。
 
 ### 推荐软件
 
@@ -22,13 +28,20 @@ MarkDown 属于轻量级的标记语言，通过纯文本格式编写并生成�
 
    <!--![Typora](https://cdn.jsdelivr.net/gh/Nikucyan/Share/main/Images/1_MD.png)-->
 
-   Typora 是目前少数可实时像 Word 一样预览内容的 Markdown 的编辑器
+   Typora 是目前少数可实时像 Word 一样预览内容的 Markdown 的编辑器（实际上是网页浏览器，可以使用 `shift + F12` 调出控制台）
 
-   - 优点：无需登录，支持多平台，界面很简洁美观，所见即所得，支持自定义主题（有 GitHub 主题页面），可以直接看大纲目录，也支持很多 Word 系快捷键，支持使用比原生 Markdown 更丰富的 HTML 标签，支持自动保存，支持 LaTeX​ 公式和公式块，支持本地图片复制粘贴，如果配合 PicGo + GitHub 之类作为图床还可以实现图片自动上传并添加 URL 链接甚至是 CDN 加速访问，支持智能标点，支持 PDF、LaTeX、Word、网页等多种格式导出；
+   - 优点：无需登录，支持多平台，界面很简洁美观，所见即所得，支持自定义主题（有 GitHub 主题页面），可以直接看大纲目录，也支持很多 Word 系快捷键，支持绝大部分 HTML / CSS 标签，支持自动保存，支持 LaTeX​ 公式和公式块，支持本地图片复制粘贴，如果配合 PicGo + GitHub 之类作为图床还可以实现图片自动上传并添加 URL 链接甚至是 CDN 加速访问，支持智能标点，支持 PDF、LaTeX、Word、网页等多种格式导出；
    - 缺点：不是传统 Markdown 编辑器，如果喜欢传统的分屏用代码控制 + 实时预览的话会不太合适，非开源，可能有少量 bug（比如在写这篇文章的时候自动保存失效了一次，怨念）；
    - 适合人群：频繁使用电脑做笔记、写草稿等需要快速记录的工作而且可能需要打公式和代码块的人。
 
-![Typora](https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_Typora_Screen.png)
+<div>
+	<center>
+	<img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_Typora_Screen.png"
+    	alt="Typora Screenshot" 
+    	style="zoom:60%;" />
+    </br>
+    Typora 的用户界面
+</div>
 
 
 
