@@ -60,7 +60,7 @@ MarkDown 属于轻量级的标记语言，通过纯文本格式编写并生成�
 
    <div>
    	<center>
-   	<img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_CMD_Screen.png"
+   	<img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_CMD_Screen2.png"
        	alt="CMD Screenshot" 
        	style="zoom:60%;" />
        </br>
