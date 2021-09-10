@@ -8,12 +8,14 @@
 
 <div>
 	<center>
-	<img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_MD.png"
+	<img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_MD_s.png"
     	alt="Markdown" 
-    	style="zoom:28%;" />
+    	style="zoom:60%;" />
     </br>
     Markdown Logo
 </div>
+
+
 
 ### 简介
 
@@ -39,7 +41,7 @@ MarkDown 属于轻量级的标记语言，通过纯文本格式编写并生成�
    
    <div>
    	<center>
-   	<img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_Typora_Screen.png"
+   	<img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_Typora_Screen2.png"
        	alt="Typora Screenshot" 
        	style="zoom:60%;" />
        </br>
