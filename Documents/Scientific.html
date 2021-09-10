@@ -3,7 +3,7 @@
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
 
-<link href='file://C:/Users/TR/AppData/Roaming/Typora/themes/night/mermaid.dark.css' rel='stylesheet' type='text/css' /><link href='file://C:/Users/TR/AppData/Roaming/Typora/themes/night/codeblock.dark.css' rel='stylesheet' type='text/css' /><link href='file://C:/Users/TR/AppData/Roaming/Typora/themes/night/sourcemode.dark.css' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+<link href='https://fonts.loli.net/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
 .mac-os-11 { --title-bar-height:28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
@@ -283,264 +283,104 @@ span.cm-strikethrough { text-decoration: line-through; }
 }
 
 
+/* meyer reset -- http://meyerweb.com/eric/tools/css/reset/ , v2.0 | 20110126 | License: none (public domain) */
+
+@include-when-export url(https://fonts.loli.net/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic-ext,cyrillic,latin-ext);
+
+/* =========== */
+
+/* pt-serif-regular - latin */
+/* pt-serif-italic - latin */
+/* pt-serif-700 - latin */
+/* pt-serif-700italic - latin */
 :root {
-  --mermaid-theme: night;
+	--active-file-bg-color: #dadada;
+	--active-file-bg-color: rgba(32, 43, 51, 0.63);
+	--active-file-text-color: white;
+	--bg-color: #f3f2ee;
+	--text-color: #1f0909;
+	--control-text-color: #444;
+	--rawblock-edit-panel-bd: #e5e5e5;
+
+	--select-text-bg-color: rgba(32, 43, 51, 0.63);
+  --select-text-font-color: white;
 }
 
-[lang='mermaid'] .label {
-  color: #333;
-}
-
-/* CSS Document */
-
-/** code highlight */
-
-.cm-s-inner .cm-variable,
-.cm-s-inner .cm-operator,
-.cm-s-inner .cm-property {
-    color: #b8bfc6;
-}
-
-.cm-s-inner .cm-keyword {
-    color: #C88FD0;
-}
-
-.cm-s-inner .cm-tag {
-    color: #7DF46A;
-}
-
-.cm-s-inner .cm-attribute {
-    color: #7575E4;
-}
-
-.CodeMirror div.CodeMirror-cursor {
-    border-left: 1px solid #b8bfc6;
-    z-index: 3;
-}
-
-.cm-s-inner .cm-string {
-    color: #D26B6B;
-}
-
-.cm-s-inner .cm-comment,
-.cm-s-inner.cm-comment {
-    color: #DA924A;
-}
-
-.cm-s-inner .cm-header,
-.cm-s-inner .cm-def,
-.cm-s-inner.cm-header,
-.cm-s-inner.cm-def {
-    color: #8d8df0;
-}
-
-.cm-s-inner .cm-quote,
-.cm-s-inner.cm-quote {
-    color: #57ac57;
-}
-
-.cm-s-inner .cm-hr {
-    color: #d8d5d5;
-}
-
-.cm-s-inner .cm-link {
-    color: #d3d3ef;
-}
-
-.cm-s-inner .cm-negative {
-    color: #d95050;
-}
-
-.cm-s-inner .cm-positive {
-    color: #50e650;
-}
-
-.cm-s-inner .cm-string-2 {
-    color: #f50;
-}
-
-.cm-s-inner .cm-meta,
-.cm-s-inner .cm-qualifier {
-    color: #b7b3b3;
-}
-
-.cm-s-inner .cm-builtin {
-    color: #f3b3f8;
-}
-
-.cm-s-inner .cm-bracket {
-    color: #997;
-}
-
-.cm-s-inner .cm-atom,
-.cm-s-inner.cm-atom {
-    color: #84B6CB;
-}
-
-.cm-s-inner .cm-number {
-    color: #64AB8F;
-}
-
-.cm-s-inner .cm-variable {
-    color: #b8bfc6;
-}
-
-.cm-s-inner .cm-variable-2 {
-    color: #9FBAD5;
-}
-
-.cm-s-inner .cm-variable-3 {
-    color: #1cc685;
-}
-
-.CodeMirror-selectedtext,
-.CodeMirror-selected {
-    background: #4a89dc;
-    color: #fff !important;
-    text-shadow: none;
-}
-
-.CodeMirror-gutters {
-    border-right: none;
-}
-
-/* CSS Document */
-
-/** markdown source **/
-.cm-s-typora-default .cm-header, 
-.cm-s-typora-default .cm-property
-{
-    color: #cebcca;
-}
-
-.CodeMirror.cm-s-typora-default div.CodeMirror-cursor{
-    border-left: 3px solid #b8bfc6;
-}
-
-.cm-s-typora-default .cm-comment {
-    color: #9FB1FF;
-}
-
-.cm-s-typora-default .cm-string {
-    color: #A7A7D9
-}
-
-.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
-    color: #848695;
-    font-style: italic;
-}
-
-.cm-s-typora-default .cm-link {
-    color: #95B94B;
-}
-
-.cm-s-typora-default .CodeMirror-activeline-background {
-    background: rgba(51, 51, 51, 0.72);
-}
-
-.cm-s-typora-default .cm-comment, .cm-s-typora-default .cm-code {
-	color: #8aa1e1;
-}@import "";
-@import "";
-@import "";
-
-:root {
-    --bg-color:  #363B40;
-    --side-bar-bg-color: #2E3033;
-    --text-color: #b8bfc6;
-
-    --select-text-bg-color:#4a89dc;
-
-    --item-hover-bg-color: #0a0d16;
-    --control-text-color: #b7b7b7;
-    --control-text-hover-color: #eee;
-    --window-border: 1px solid #555;
-
-    --active-file-bg-color: rgb(34, 34, 34);
-    --active-file-border-color: #8d8df0;
-
-    --primary-color: #a3d5fe;
-
-    --active-file-text-color: white;
-    --item-hover-bg-color: #70717d;
-    --item-hover-text-color: white;
-    --primary-color: #6dc1e7;
-
-    --rawblock-edit-panel-bd: #333;
-
-    --search-select-bg-color: #428bca;
+pre {
+	--select-text-bg-color: #36284e;
+	--select-text-font-color: #fff;
 }
 
 html {
-    font-size: 16px;
-    -webkit-font-smoothing: antialiased;
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
 }
 
-html,
-body {
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    background: #363B40;
-    background: var(--bg-color);
-    fill: currentColor;
-    line-height: 1.625rem;
+html, body {
+	background-color: #f3f2ee;
+	font-family: "PT Serif", 'Times New Roman', Times, serif;
+	color: #1f0909;
+	line-height: 1.5em;
 }
+
+/*#write {
+	overflow-x: auto;
+    max-width: initial;
+	padding-left: calc(50% - 17em);
+    padding-right: calc(50% - 17em);
+}
+
+@media (max-width: 36em) {
+ 	#write {
+ 		padding-left: 1em;
+    	padding-right: 1em;
+ 	}
+}*/
 
 #write {
-    max-width: 914px;
+	max-width: 40em;
 }
-
 
 @media only screen and (min-width: 1400px) {
 	#write {
-		max-width: 1024px;
+			max-width: 914px;
 	}
 }
 
-@media only screen and (min-width: 1800px) {
-	#write {
-		max-width: 1200px;
-	}
+ol li {
+	list-style-type: decimal;
+	list-style-position: outside;
+}
+ul li {
+	list-style-type: disc;
+	list-style-position: outside;
 }
 
-html,
-body,
-button,
-input,
-select,
-textarea,
-div.code-tooltip-content {
-    color: #b8bfc6;
-    border-color: transparent;
+ol,
+ul {
+	list-style: none;
 }
 
-div.code-tooltip,
-.md-hover-tip .md-arrow:after {
-    background: #333;
+blockquote,
+q {
+	quotes: none;
 }
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* styles */
 
-.native-window #md-notification {
-    border: 1px solid #70717d;
-}
+/* ====== */
 
-.popover.bottom > .arrow:after {
-    border-bottom-color: #333;
-}
-
-html,
-body,
-button,
-input,
-select,
-textarea {
-    font-family: "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
-}
-
-hr {
-    height: 2px;
-    border: 0;
-    margin: 24px 0 !important;
-}
+/* headings */
 
 h1,
 h2,
@@ -548,662 +388,371 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Lucida Grande", "Corbel", sans-serif;
-    font-weight: normal;
-    clear: both;
-    -ms-word-wrap: break-word;
-    word-wrap: break-word;
-    margin: 0;
-    padding: 0;
-    color: #DEDEDE
+	font-weight: bold;
 }
-
 h1 {
-    font-size: 2.5rem;
-    /* 36px */
-    line-height: 2.75rem;
-    /* 40px */
-    margin-bottom: 1.5rem;
-    /* 24px */
-    letter-spacing: -1.5px;
+	font-size: 1.875em;
+	/*30 / 16*/
+	line-height: 1.6em;
+	/* 48 / 30*/
+	margin-top: 2em;
 }
-
-h2 {
-    font-size: 1.63rem;
-    /* 24px */
-    line-height: 1.875rem;
-    /* 30px */
-    margin-bottom: 1.5rem;
-    /* 24px */
-    letter-spacing: -1px;
-    font-weight: bold;
-}
-
+h2,
 h3 {
-    font-size: 1.17rem;
-    /* 18px */
-    line-height: 1.5rem;
-    /* 24px */
-    margin-bottom: 1.5rem;
-    /* 24px */
-    letter-spacing: -1px;
-    font-weight: bold;
+	font-size: 1.3125em;
+	/*21 / 16*/
+	line-height: 1.15;
+	/*24 / 21*/
+	margin-top: 2.285714em;
+	/*48 / 21*/
+	margin-bottom: 1.15em;
+	/*24 / 21*/
 }
-
+h3 {
+	font-weight: normal;
+}
 h4 {
-    font-size: 1.12rem;
-    /* 16px */
-    line-height: 1.375rem;
-    /* 22px */
-    margin-bottom: 1.5rem;
-    /* 24px */
-    color: white;
+	font-size: 1.125em;
+	/*18 / 16*/
+	margin-top: 2.67em;
+	/*48 / 18*/
 }
-
-h5 {
-    font-size: 0.97rem;
-    /* 16px */
-    line-height: 1.25rem;
-    /* 22px */
-    margin-bottom: 1.5rem;
-    /* 24px */
-    font-weight: bold;
-}
-
+h5,
 h6 {
-    font-size: 0.93rem;
-    /* 16px */
-    line-height: 1rem;
-    /* 16px */
-    margin-bottom: 0.75rem;
-    color: white;
+	font-size: 1em;
+	/*16*/
 }
-
-@media (min-width: 980px) {
-    h3.md-focus:before,
-    h4.md-focus:before,
-    h5.md-focus:before,
-    h6.md-focus:before {
-        color: #ddd;
-        border: 1px solid #ddd;
-        border-radius: 3px;
-        position: absolute;
-        left: -1.642857143rem;
-        top: .357142857rem;
-        float: left;
-        font-size: 9px;
-        padding-left: 2px;
-        padding-right: 2px;
-        vertical-align: bottom;
-        font-weight: normal;
-        line-height: normal;
-    }
-
-    h3.md-focus:before {
-        content: 'h3';
-    }
-
-    h4.md-focus:before {
-        content: 'h4';
-    }
-
-    h5.md-focus:before {
-        content: 'h5';
-        top: 0px;
-    }
-
-    h6.md-focus:before {
-        content: 'h6';
-        top: 0px;
-    }
+h1 {
+	border-bottom: 1px solid;
+	margin-bottom: 1.875em;
+	padding-bottom: 0.8125em;
 }
+/* links */
 
 a {
-    text-decoration: none;
-    outline: 0;
+	text-decoration: none;
+	color: #065588;
 }
-
-a:hover {
-    outline: 0;
+a:hover,
+a:active {
+	text-decoration: underline;
 }
-
-a:focus {
-    outline: thin dotted;
-}
-
-sup.md-footnote {
-    background-color: #555;
-    color: #ddd;
-}
-
-p {
-    -ms-word-wrap: break-word;
-    word-wrap: break-word;
-}
+/* block spacing */
 
 p,
-ul,
-dd,
-ol,
-hr,
-address,
-pre,
-table,
-iframe,
-.wp-caption,
-.wp-audio-shortcode,
-.wp-video-shortcode {
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-    /* 24px */
+blockquote,
+.md-fences {
+	margin-bottom: 1.5em;
 }
-
-audio:not([controls]) {
-    display: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 1.5em;
 }
-
-[hidden] {
-    display: none;
-}
-
-::-moz-selection {
-    background: #4a89dc;
-    color: #fff;
-    text-shadow: none;
-}
-
-*.in-text-selection,
-::selection {
-    background: #4a89dc;
-    color: #fff;
-    text-shadow: none;
-}
-
-ul,
-ol {
-    padding: 0 0 0 1.875rem;
-    /* 30px */
-}
-
-ul {
-    list-style: square;
-}
-
-ol {
-    list-style: decimal;
-}
-
-ul ul,
-ol ol,
-ul ol,
-ol ul {
-    margin: 0;
-}
-
-b,
-th,
-dt,
-strong {
-    font-weight: bold;
-}
-
-i,
-em,
-dfn,
-cite {
-    font-style: italic;
-}
+/* blockquote */
 
 blockquote {
-    padding-left: 1.875rem;
-    margin: 0 0 1.875rem 1.875rem;
-    border-left: solid 2px #474d54;
-    padding-left: 30px;
-    margin-top: 35px;
+	font-style: italic;
+	border-left: 5px solid;
+	margin-left: 2em;
+	padding-left: 1em;
 }
+/* lists */
 
-pre,
-code,
-kbd,
-tt,
-var {
-    font-size: 0.875em;
-    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+ul,
+ol {
+	margin: 0 0 1.5em 1.5em;
 }
-
-code,
-tt,
-var {
-    background: rgba(0, 0, 0, 0.05);
-}
-
-kbd {
-    padding: 2px 4px;
-    font-size: 90%;
-    color: #fff;
-    background-color: #333;
-    border-radius: 3px;
-    box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
-}
-
-pre.md-fences {
-    padding: 10px 10px 10px 30px;
-    margin-bottom: 20px;
-    background: #333;
-}
-
-.CodeMirror-gutters {
-    background: #333;
-    border-right: 1px solid transparent;
-}
-
-.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
-.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
-.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
-    bottom: -2.2em;
-    right: 4px;
-}
-
-code,
-kbd,
-tt,
-var {
-    padding: 2px 5px;
+/* tables */
+.md-meta,.md-before, .md-after {
+	color:#999;
 }
 
 table {
-    max-width: 100%;
-    width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
+	margin-bottom: 1.5em;
+	/*24 / 16*/
+	font-size: 1em;
+	/* width: 100%; */
 }
-
-th,
+thead th,
+tfoot th {
+	padding: .25em .25em .25em .4em;
+	text-transform: uppercase;
+}
+th {
+	text-align: left;
+}
 td {
-    padding: 5px 10px;
-    vertical-align: top;
+	vertical-align: top;
+	padding: .25em .25em .25em .4em;
 }
 
-a {
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+code,
+.md-fences {
+	background-color: #dadada;
 }
 
-hr {
-    background: #474d54;
-    /* variable */
+code {
+	padding-left: 2px;
+	padding-right: 2px;
 }
+
+.md-fences {
+	margin-left: 2em;
+	margin-bottom: 3em;
+	padding-left: 1ch;
+	padding-right: 1ch;
+}
+
+pre,
+code,
+tt {
+	font-size: .875em;
+	line-height: 1.714285em;
+}
+/* some fixes */
 
 h1 {
-    margin-top: 2em;
+	line-height: 1.3em;
+	font-weight: normal;
+	margin-bottom: 0.5em;
 }
 
-a {
-    color: #e0e0e0;
-    text-decoration: underline;
+p + ul,
+p + ol{
+	margin-top: .5em;
 }
 
-a:hover {
-    color: #fff;
+h3 + ul,
+h4 + ul,
+h5 + ul,
+h6 + ul,
+h3 + ol,
+h4 + ol,
+h5 + ol,
+h6 + ol {
+	margin-top: .5em;
 }
 
-.md-inline-math script {
-    color: #81b1db;
+li > ul,
+li > ol {
+	margin-top: inherit;
+	margin-bottom: 0;
 }
 
-b,
-th,
-dt,
-strong {
-    color: #DEDEDE;
-    /* variable */
+li ol>li {
+	list-style-type: lower-alpha;
 }
 
-mark {
-    background: #D3D40E;
+li li ol>li{
+	list-style-type: lower-roman;
 }
 
+h2,
+h3 {
+	margin-bottom: .75em;
+}
+hr {
+	border-top: none;
+	border-right: none;
+	border-bottom: 1px solid;
+	border-left: none;
+}
+h1 {
+	border-color: #c5c5c5;
+}
 blockquote {
-    color: #9DA2A6;
+	border-color: #bababa;
+	color: #656565;
 }
 
-table a {
-    color: #DEDEDE;
-    /* variable */
-}
-
-th,
-td {
-    border: solid 1px #474d54;
-    /* variable */
-}
-
-.task-list {
-    padding-left: 0;
-}
-
-.md-task-list-item {
-    padding-left: 1.25rem;
-}
-
-.md-task-list-item > input {
-    top: auto;
-}
-
-.md-task-list-item > input:before {
-    content: "";
-    display: inline-block;
-    width: 0.875rem;
-    height: 0.875rem;
-    vertical-align: middle;
-    text-align: center;
-    border: 1px solid #b8bfc6;
-    background-color: #363B40;
-    margin-top: -0.4rem;
-}
-
-.md-task-list-item > input:checked:before,
-.md-task-list-item > input[checked]:before {
-    content: '\221A';
-    /*◘*/
-    font-size: 0.625rem;
-    line-height: 0.625rem;
-    color: #DEDEDE;
-}
-
-/** quick open **/
-.auto-suggest-container {
-    border: 0px;
-    background-color: #525C65;
-}
-
-#typora-quick-open {
-    background-color: #525C65;
-}
-
-#typora-quick-open input{
-    background-color: #525C65;
-    border: 0;
-    border-bottom: 1px solid grey;
-}
-
-.typora-quick-open-item {
-    background-color: inherit;
-    color: inherit;
-}
-
-.typora-quick-open-item.active,
-.typora-quick-open-item:hover {
-    background-color: #4D8BDB;
-    color: white;
-}
-
-.typora-quick-open-item:hover {
-    background-color: rgba(77, 139, 219, 0.8);
-}
-
-.typora-search-spinner > div {
-  background-color: #fff;
-}
-
-#write pre.md-meta-block {
-    border-bottom: 1px dashed #ccc;
-    background: transparent;
-    padding-bottom: 0.6em;
-    line-height: 1.6em;
-}
-
-.btn,
-.btn .btn-default {
-    background: transparent;
-    color: #b8bfc6;
+blockquote ul,
+blockquote ol {
+	margin-left:0;
 }
 
 .ty-table-edit {
-    border-top: 1px solid gray;
-    background-color: #363B40;
+	background-color: transparent;
+}
+thead {
+	background-color: #dadada;
+}
+tr:nth-child(even) {
+	background: #e8e7e7;
+}
+hr {
+	border-color: #c5c5c5;
+}
+.task-list{
+	padding-left: 1rem;
 }
 
-.popover-title {
-    background: transparent;
+.md-task-list-item {
+	padding-left: 1.5rem;
+	list-style-type: none;
+}
+
+.md-task-list-item > input:before {
+	content: '\221A';
+	display: inline-block;
+	width: 1.25rem;
+  	height: 1.6rem;
+	vertical-align: middle;
+	text-align: center;
+	color: #ddd;
+	background-color: #F3F2EE;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before{
+	color: inherit;
+}
+
+#write pre.md-meta-block {
+	min-height: 1.875rem;
+	color: #555;
+	border: 0px;
+	background: transparent;
+	margin-top: -4px;
+	margin-left: 1em;
+	margin-top: 1em;
 }
 
 .md-image>.md-meta {
-    color: #BBBBBB;
-    background: transparent;
+	color: #9B5146;
 }
 
-.md-expand.md-image>.md-meta {
-    color: #DDD;
+.md-image>.md-meta{
+	font-family: Menlo, 'Ubuntu Mono', Consolas, 'Courier New', 'Microsoft Yahei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', serif;
 }
 
-#write>h3:before,
-#write>h4:before,
-#write>h5:before,
-#write>h6:before {
-    border: none;
-    border-radius: 0px;
-    color: #888;
-    text-decoration: underline;
-    left: -1.4rem;
-    top: 0.2rem;
+
+#write>h3.md-focus:before{
+	left: -1.5rem;
+	color:#999;
+	border-color:#999;
+}
+#write>h4.md-focus:before{
+	left: -1.5rem;
+	top: .25rem;
+	color:#999;
+	border-color:#999;
+}
+#write>h5.md-focus:before{
+	left: -1.5rem;
+	top: .0.3125rem;
+	color:#999;
+	border-color:#999;
+}
+#write>h6.md-focus:before{
+	left: -1.5rem;
+	top: 0.3125rem;
+	color:#999;
+	border-color:#999;
 }
 
-#write>h3.md-focus:before {
-    top: 2px;
+.md-toc:focus .md-toc-content{
+	margin-top: 19px;
 }
 
-#write>h4.md-focus:before {
-    top: 2px;
+.md-toc-content:empty:before{
+	color: #065588;
 }
-
 .md-toc-item {
-    color: #A8C2DC;
+	color: #065588;
 }
-
 #write div.md-toc-tooltip {
-    background-color: #363B40;
-}
-
-.dropdown-menu .btn:hover,
-.dropdown-menu .btn:focus,
-.md-toc .btn:hover,
-.md-toc .btn:focus {
-    color: white;
-    background: black;
-}
-
-#toc-dropmenu {
-    background: rgba(50, 54, 59, 0.93);
-    border: 1px solid rgba(253, 253, 253, 0.15);
-}
-
-#toc-dropmenu .divider {
-    background-color: #9b9b9b;
-}
-
-.outline-expander:before {
-    top: 2px;
+	background-color: #f3f2ee;
 }
 
 #typora-sidebar {
-    box-shadow: none;
-    border-right: 1px dashed;
-    border-right: none;
+	background-color: #f3f2ee;
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.375);
+  	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.375);
 }
 
-.sidebar-tabs {
-    border-bottom:0;
+.pin-outline #typora-sidebar {
+	background: inherit;
+	box-shadow: none;
+	border-right: 1px dashed;
 }
 
-#typora-sidebar:hover .outline-title-wrapper {
-    border-left: 1px dashed;
-}
-
-.outline-title-wrapper .btn {
-    color: inherit;
+.pin-outline #typora-sidebar:hover .outline-title-wrapper {
+	border-left:1px dashed;
 }
 
 .outline-item:hover {
-    border-color: #363B40;
-    background-color: #363B40;
-    color: white;
+  background-color: #dadada;
+  border-left: 28px solid #dadada;
+  border-right: 18px solid #dadada;
 }
 
-h1.md-focus .md-attr,
-h2.md-focus .md-attr,
-h3.md-focus .md-attr,
-h4.md-focus .md-attr,
-h5.md-focus .md-attr,
-h6.md-focus .md-attr,
-.md-header-span .md-attr {
-    color: #8C8E92;
-    display: inline;
+.typora-node .outline-item:hover {
+  	border-right: 28px solid #dadada;
 }
 
-.md-comment {
-    color: #5a95e3;
-    opacity: 1;
+.outline-expander:before {
+  content: "\f0da";
+  font-family: FontAwesome;
+  font-size:14px;
+  top: 1px;
 }
 
-.md-inline-math svg {
-    color: #b8bfc6;
-}
-
-#math-inline-preview .md-arrow:after {
-    background: black;
+.outline-expander:hover:before,
+.outline-item-open>.outline-item>.outline-expander:before {
+  content: "\f0d7";
 }
 
 .modal-content {
-    background: var(--bg-color);
-    border: 0;
+	background-color: #f3f2ee;
 }
 
-.modal-title {
-    font-size: 1.5em;
-}
-
-.modal-content input {
-    background-color: rgba(26, 21, 21, 0.51);
-    color: white;
-}
-
-.modal-content .input-group-addon {
-    color: white;
-}
-
-.modal-backdrop {
-    background-color: rgba(174, 174, 174, 0.7);
-}
-
-.modal-content .btn-primary {
-    border-color: var(--primary-color);
-}
-
-.md-table-resize-popover {
-    background-color: #333;
-}
-
-.form-inline .input-group .input-group-addon {
-    color: white;
-}
-
-#md-searchpanel {
-    border-bottom: 1px dashed grey;
+.auto-suggest-container ul li {
+	list-style-type: none;
 }
 
 /** UI for electron */
 
-.context-menu,
-#spell-check-panel,
-#footer-word-count-info {
-    background-color: #42464A;
+.megamenu-menu,
+#top-titlebar, #top-titlebar *,
+.megamenu-content {
+	background: #f3f2ee;
+	color: #1f0909;
 }
 
-.context-menu.dropdown-menu .divider,
-.dropdown-menu .divider {
-    background-color: #777777;
-    opacity: 1;
+.megamenu-menu-header {
+	border-bottom: 1px dashed #202B33;
 }
 
-footer {
-    color: inherit;
+.megamenu-menu {
+	box-shadow: none;
+	border-right: 1px dashed;
 }
 
-@media (max-width: 1000px) {
-    footer {
-        border-top: none;
-    }
-    footer:hover {
-        color: inherit;
-    }
+header, .context-menu, .megamenu-content, footer {
+	font-family: "PT Serif", 'Times New Roman', Times, serif;
+    color: #1f0909;
 }
 
-#file-info-file-path .file-info-field-value:hover {
-    background-color: #555;
-    color: #dedede;
+#megamenu-back-btn {
+	color: #1f0909;
+	border-color: #1f0909;
 }
 
-.megamenu-content,
-.megamenu-opened header {
-    background: var(--bg-color);
+.megamenu-menu-header #megamenu-menu-header-title:before {
+	color: #1f0909;
 }
 
-.megamenu-menu-panel h2,
-.megamenu-menu-panel h1,
-.long-btn {
-    color: inherit;
+.megamenu-menu-list li a:hover, .megamenu-menu-list li a.active {
+	color: inherit;
+	background-color: #e8e7df;
 }
 
-.megamenu-menu-panel input[type='text'] {
-    background: inherit;
-    border: 0;
-    border-bottom: 1px solid;
-}
-
-#recent-file-panel-action-btn {
-    background: inherit;
-    border: 1px grey solid;
-}
-
-.megamenu-menu-panel .dropdown-menu > li > a {
-    color: inherit;
-    background-color: #2F353A;
-    text-decoration: none;
-}
-
-.megamenu-menu-panel table td:nth-child(1) {
-    color: inherit;
-    font-weight: bold;
-}
-
-.megamenu-menu-panel tbody tr:hover td:nth-child(1) {
-    color: white;
-}
-
-.modal-footer .btn-default, 
-.modal-footer .btn-primary,
-.modal-footer .btn-default:not(:hover) {
-    border: 1px solid;
-    border-color: transparent;
-}
-
-.btn-primary {
-    color: white;
-}
-
-.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
-    color: white;
-    border: 1px solid #ddd;
-    background-color: inherit;
-}
-
-.modal-header {
-    border-bottom: 0;
-}
-
-.modal-footer {
-    border-top: 0;
+.long-btn:hover {
+	background-color: #e8e7df;
 }
 
 #recent-file-panel tbody tr:nth-child(2n-1) {
@@ -1215,247 +764,107 @@ footer {
 }
 
 .megamenu-menu-panel .btn {
-    border: 1px solid #eee;
-    background: transparent;
+	background-color: #D2D1D1;
 }
 
-.mouse-hover .toolbar-icon.btn:hover,
-#w-full.mouse-hover,
-#w-pin.mouse-hover {
-    background-color: inherit;
-}
-
-.typora-node::-webkit-scrollbar {
-    width: 5px;
-}
-
-.typora-node::-webkit-scrollbar-thumb:vertical {
-    background: rgba(250, 250, 250, 0.3);
-}
-
-.typora-node::-webkit-scrollbar-thumb:vertical:active {
-    background: rgba(250, 250, 250, 0.5);
-}
-
-#w-unpin {
-    background-color: #4182c4;
-}
-
-#top-titlebar, #top-titlebar * {
-    color: var(--item-hover-text-color);
+.btn-default {
+	background-color: transparent;
 }
 
 .typora-sourceview-on #toggle-sourceview-btn,
-#footer-word-count:hover,
 .ty-show-word-count #footer-word-count {
-    background: #333333;
+	background: #c7c5c5;
 }
 
-#toggle-sourceview-btn:hover {
-    color: #eee;
-    background: #333333;
+#typora-quick-open {
+    background-color: inherit;
 }
 
-/** focus mode */
-.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
-    color: #686868 !important;
+.md-diagram-panel {
+	margin-top: 8px;
 }
 
-.on-focus-mode .md-end-block:not(.md-focus) img,
-.on-focus-mode .md-task-list-item:not(.md-focus-container)>input {
-    opacity: #686868 !important;
-}
-
-.on-focus-mode li[cid]:not(.md-focus-container){
-    color: #686868;
-}
-
-.on-focus-mode .md-fences.md-focus .CodeMirror-code>*:not(.CodeMirror-activeline) *,
-.on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
-    color: #686868 !important;
-}
-
-.on-focus-mode .md-focus,
-.on-focus-mode .md-focus-container {
-    color: #fff;
-}
-
-.on-focus-mode #typora-source .CodeMirror-code>*:not(.CodeMirror-activeline) * {
-    color: #686868 !important;
-}
-
-
-/*diagrams*/
-#write .md-focus .md-diagram-panel {
-    border: 1px solid #ddd;
-    margin-left: -1px;
-    width: calc(100% + 2px);
-}
-
-/*diagrams*/
-#write .md-focus.md-fences-with-lineno .md-diagram-panel {
-    margin-left: auto;
-}
-
-.md-diagram-panel-error {
-    color: #f1908e;
-}
-
-.active-tab-files #info-panel-tab-file,
-.active-tab-files #info-panel-tab-file:hover,
-.active-tab-outline #info-panel-tab-outline,
-.active-tab-outline #info-panel-tab-outline:hover {
-    color: #eee;
-}
-
-.sidebar-footer-item:hover,
-.footer-item:hover {
-    background: inherit;
-    color: white;
-}
-
-.ty-side-sort-btn.active,
-.ty-side-sort-btn:hover,
-.selected-folder-menu-item a:after {
-    color: white;
-}
-
-#sidebar-files-menu {
-    border:solid 1px;
-    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.79);
-    background-color: var(--bg-color);
-}
-
-.file-list-item {
-    border-bottom:none;
+.file-list-item-file-name {
+	font-weight: initial;
 }
 
 .file-list-item-summary {
-    opacity: 1;
+	opacity: 1;
 }
 
-.file-list-item.active:first-child {
-    border-top: none;
+.file-list-item {
+	color: #777;
 }
 
-.file-node-background {
-    height: 32px;
-}
-
-.file-library-node.active>.file-node-content,
 .file-list-item.active {
-    color: white;
-    color: var(--active-file-text-color);
+	background-color: inherit;
+	color: black;
+}
+
+.ty-side-sort-btn.active {
+	background-color: inherit;
+}
+
+.file-list-item.active .file-list-item-file-name  {
+	font-weight: bold;
+}
+
+.file-list-item{
+    opacity:1 !important;
 }
 
 .file-library-node.active>.file-node-background{
-    background-color: rgb(34, 34, 34);
-    background-color: var(--active-file-bg-color);
-}
-.file-list-item.active {
-    background-color: rgb(34, 34, 34);
-    background-color: var(--active-file-bg-color);
+	background-color: rgba(32, 43, 51, 0.63);
+	background-color: var(--active-file-bg-color);
 }
 
-#ty-tooltip {
-    background-color: black;
-    color: #eee;
+.file-tree-node.active>.file-node-content{
+	color: white;
+	color: var(--active-file-text-color);
 }
 
 .md-task-list-item>input {
-    margin-left: -1.3em;
-    margin-top: 0.3rem;
-    -webkit-appearance: none;
+	margin-left: -1.7em;
+	margin-top: calc(1rem - 12px);
 }
 
-.md-mathjax-midline {
-    background-color: #57616b;
-    border-bottom: none;
+input {
+	border: 1px solid #aaa;
 }
 
-footer.ty-footer {
-    border-color: #656565;
+.megamenu-menu-header #megamenu-menu-header-title,
+.megamenu-menu-header:hover, 
+.megamenu-menu-header:focus {
+	color: inherit;
+}
+
+.dropdown-menu .divider {
+	border-color: #e5e5e5;
+	opacity: 1;
+}
+
+/* https://github.com/typora/typora-issues/issues/2046 */
+.os-windows-7 strong,
+.os-windows-7 strong  {
+	font-weight: 760;
 }
 
 .ty-preferences .btn-default {
-    background: transparent;
-}
-.ty-preferences .btn-default:hover {
-    background: #57616b;
+	background: transparent;
 }
 
-.ty-preferences select {
-    border: 1px solid #989698;
-    height: 21px;
+.ty-preferences .window-header {
+	border-bottom: 1px dashed #202B33;
+	box-shadow: none;
 }
 
-.ty-preferences .nav-group-item.active,
-.export-item.active,
-.export-items-list-control,
-.export-detail {
-    background: var(--item-hover-bg-color);
+#sidebar-loading-template, #sidebar-loading-template.file-list-item {
+	color: #777;
 }
 
-.ty-preferences input[type="search"] {
-    border-color: #333;
-    background: #333;
-    line-height: 22px;
-    border-radius: 6px;
-    color: white;
-}
-
-.ty-preferences input[type="search"]:focus {
-    box-shadow: none;
-}
-
-[data-is-directory="true"] .file-node-content {
-    margin-bottom: 0;
-}
-
-.file-node-title {
-    line-height: 22px;
-}
-
-.html-for-mac .file-node-open-state, .html-for-mac .file-node-icon {
-    line-height: 26px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: rgba(230, 230, 230, 0.30);
-}
-
-::-webkit-scrollbar-thumb:active {
-    background: rgba(230, 230, 230, 0.50);
-}
-
-#typora-sidebar:hover div.sidebar-content-content::-webkit-scrollbar-thumb:horizontal {
-    background: rgba(230, 230, 230, 0.30);
-}
-
-.nav-group-item:active {
-    background-color: #474d54 !important;
-}
-
-.md-search-hit {
-    background: rgba(199, 140, 60, 0.81);
-    color: #eee;
-}
-
-.md-search-hit * {
-    color: #eee;
-}
-
-#md-searchpanel input {
-    color: white;
-}
-
-.modal-backdrop.in {
-    opacity: 1;
-    backdrop-filter: blur(1px);
-}
-
-.clear-btn-icon {
-    top: 8px;
+.searchpanel-search-option-btn.active {
+	background: #777;
+	color: white;
 }
 
 img{
@@ -1613,7 +1022,27 @@ g[data-mml-node="xypic"] path {
 </head>
 <body class='typora-export os-windows typora-export-show-outline typora-export-collapse-outline'><div class='typora-export-content'>
 <div class="typora-export-sidebar"><div class="outline-content"><li class="outline-item-wrapper outline-h1 outline-item-open"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#软件推荐-1---学术科研类">软件推荐 1 - 学术科研类</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#markdown">Markdown</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#简介-1">简介</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#推荐软件-1">推荐软件</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#联动软件推荐-1">联动软件推荐</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#latex
-"><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="5.788ex" height="2.108ex" role="img" focusable="false" viewBox="0 -716.3 2558.3 931.8" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.488ex;"><defs><path id="MJX-62-TEX-N-4C" d="M128 622Q121 629 117 631T101 634T58 637H25V683H36Q48 680 182 680Q324 680 348 683H360V637H333Q273 637 258 635T233 622L232 342V129Q232 57 237 52Q243 47 313 47Q384 47 410 53Q470 70 498 110T536 221Q536 226 537 238T540 261T542 272T562 273H582V268Q580 265 568 137T554 5V0H25V46H58Q100 47 109 49T128 61V622Z"></path><path id="MJX-62-TEX-N-41" d="M255 0Q240 3 140 3Q48 3 39 0H32V46H47Q119 49 139 88Q140 91 192 245T295 553T348 708Q351 716 366 716H376Q396 715 400 709Q402 707 508 390L617 67Q624 54 636 51T687 46H717V0H708Q699 3 581 3Q458 3 437 0H427V46H440Q510 46 510 64Q510 66 486 138L462 209H229L209 150Q189 91 189 85Q189 72 209 59T259 46H264V0H255ZM447 255L345 557L244 256Q244 255 345 255H447Z"></path><path id="MJX-62-TEX-N-54" d="M36 443Q37 448 46 558T55 671V677H666V671Q667 666 676 556T685 443V437H645V443Q645 445 642 478T631 544T610 593Q593 614 555 625Q534 630 478 630H451H443Q417 630 414 618Q413 616 413 339V63Q420 53 439 50T528 46H558V0H545L361 3Q186 1 177 0H164V46H194Q264 46 283 49T309 63V339V550Q309 620 304 625T271 630H244H224Q154 630 119 601Q101 585 93 554T81 486T76 443V437H36V443Z"></path><path id="MJX-62-TEX-N-45" d="M128 619Q121 626 117 628T101 631T58 634H25V680H597V676Q599 670 611 560T625 444V440H585V444Q584 447 582 465Q578 500 570 526T553 571T528 601T498 619T457 629T411 633T353 634Q266 634 251 633T233 622Q233 622 233 621Q232 619 232 497V376H286Q359 378 377 385Q413 401 416 469Q416 471 416 473V493H456V213H416V233Q415 268 408 288T383 317T349 328T297 330Q290 330 286 330H232V196V114Q232 57 237 52Q243 47 289 47H340H391Q428 47 452 50T505 62T552 92T584 146Q594 172 599 200T607 247T612 270V273H652V270Q651 267 632 137T610 3V0H25V46H58Q100 47 109 49T128 61V619Z"></path><path id="MJX-62-TEX-N-58" d="M270 0Q252 3 141 3Q46 3 31 0H23V46H40Q129 50 161 88Q165 94 244 216T324 339Q324 341 235 480T143 622Q133 631 119 634T57 637H37V683H46Q64 680 172 680Q297 680 318 683H329V637H324Q307 637 286 632T263 621Q263 618 322 525T384 431Q385 431 437 511T489 593Q490 595 490 599Q490 611 477 622T436 637H428V683H437Q455 680 566 680Q661 680 676 683H684V637H667Q585 634 551 599Q548 596 478 491Q412 388 412 387Q412 385 514 225T620 62Q628 53 642 50T695 46H726V0H717Q699 3 591 3Q466 3 445 0H434V46H440Q454 46 476 51T499 64Q499 67 463 124T390 238L353 295L350 292Q348 290 343 283T331 265T312 236T286 195Q219 88 218 84Q218 70 234 59T272 46H280V0H270Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><use data-c="4C" xlink:href="#MJX-62-TEX-N-4C"></use></g><g data-mml-node="mspace" transform="translate(625,0)"></g><g data-mml-node="mpadded" transform="translate(300,0)"><g transform="translate(0,210)"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mstyle" transform="scale(0.707)"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><use data-c="41" xlink:href="#MJX-62-TEX-N-41"></use></g></g></g></g></g></g><g data-mml-node="mspace" transform="translate(830.3,0)"></g><g data-mml-node="mi" transform="translate(660.3,0)"><use data-c="54" xlink:href="#MJX-62-TEX-N-54"></use></g><g data-mml-node="mspace" transform="translate(1382.3,0)"></g><g data-mml-node="mpadded" transform="translate(1242.3,0)"><g transform="translate(0,-215.5)"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><use data-c="45" xlink:href="#MJX-62-TEX-N-45"></use></g></g></g></g><g data-mml-node="mspace" transform="translate(1923.3,0)"></g><g data-mml-node="mi" transform="translate(1808.3,0)"><use data-c="58" xlink:href="#MJX-62-TEX-N-58"></use></g></g></g></g></svg></mjx-container><script type="math/tex">\mathrm{\LaTeX}</script>​</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#简介-2">简介</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#推荐软件-2">推荐软件</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#联动软件推荐-2">联动软件推荐</a></div><ul class="outline-children"></ul></li></ul></li></ul></li></div></div><div id='write'  class=''><h1 id='软件推荐-1---学术科研类'><span>软件推荐 1 - 学术科研类</span></h1><p><span>平常在学习工作或者科研实验的时候，经常会遇到软件不知道怎么选的问题，尤其是当有标准化的需求，比如文字排版、图表制作等，或者想要降低试错成本。本文将非常主观地结合一些个人使用经验帮助可能有需要的同学找到合适的软件和工具。</span></p><p>&nbsp;</p><h2 id='markdown'><span>Markdown</span></h2><p><img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/main/Images/1_MD.png" referrerpolicy="no-referrer" alt="Markdown"></p><h3 id='简介-1'><span>简介</span></h3><p><span>很多人想到起草文稿或者记笔记肯定会先想到 Microsoft Office 系列的 Word、One Note、记事本等，但是 Word 实际是属于相对正式的排版软件而非码字软件，会让人觉得有些不顺手也很正常（各种很血压的情况大家也应该遇到不少）；而用系统自带的记事本或写字板，功能不齐全，插图打代码什么的也不方便；Notability 好用是真好用，但也不是所有人都能有 iPad（也不是所有人能能喜欢在 iPad 上手写），如果是纯 PC 党或者需要带代码高亮等情况就很不适合。</span></p><p><span>在此，隆重推荐最适合码字的工具：</span><strong><span>Markdown</span></strong></p><p><span>MarkDown 属于轻量级的标记语言，通过纯文本格式编写并生成可实时预览的 HTML 文档，而且对图片、表格、公式、超链接、代码高亮皆有支持（部分功能不是所有编辑器都有）。目前很多网站和论坛也支持使用 Markdown 编辑，如 GitHub、CSDN、简书、Reddit 等。大部分编辑器也都是免费甚至是开源的，对学生而言十分友好。另外其语法十分简单，如用 </span><code>#</code><span> 和多个 </span><code>#</code><span> 表示不同大纲等级的标题；用 </span><code>-</code><span> 表示无序列表，用 </span><code>* ... *</code><span> 和 </span><code>** ... **</code><span> 表示斜体和粗体，用 </span><code>![图片标题](超链接)</code><span> 引用图片（部分编辑器还支持本地图片引用）等，上手极快。</span></p><h3 id='推荐软件-1'><span>推荐软件</span></h3><ol start='' ><li><p><strong><span>Typora</span></strong><span>（本文档都是用 Typora 进行编写）</span></p><p><a href='http://!--![Typora](https://cdn.jsdelivr.net/gh/Nikucyan/Share/main/Images/1_MD.png)--' target='_blank' class='url'>!--![Typora](https://cdn.jsdelivr.net/gh/Nikucyan/Share/main/Images/1_MD.png)--</a></p><p><span>Typora 是目前少数可实时像 Word 一样预览内容的 Markdown 的编辑器</span></p><ul><li><span>优点：无需登录，支持多平台，界面很简洁美观，所见即所得，支持自定义主题（有 GitHub 主题页面），可以直接看大纲目录，也支持很多 Word 系快捷键，支持使用比原生 Markdown 更丰富的 HTML 标签，支持自动保存，支持 LaTeX​ 公式和公式块，支持本地图片复制粘贴，如果配合 PicGo + GitHub 之类作为图床还可以实现图片自动上传并添加 URL 链接甚至是 CDN 加速访问，支持智能标点，支持 PDF、LaTeX、Word、网页等多种格式导出；</span></li><li><span>缺点：不是传统 Markdown 编辑器，如果喜欢传统的分屏用代码控制 + 实时预览的话会不太合适，非开源，可能有少量 bug（比如在写这篇文章的时候自动保存失效了一次，怨念）；</span></li><li><span>适合人群：频繁使用电脑做笔记、写草稿等需要快速记录的工作而且可能需要打公式和代码块的人。</span></li></ul></li></ol><p><img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/main/Images/1_Typora_Screen.png" referrerpolicy="no-referrer" alt="Typora"></p><p>&nbsp;</p><ol start='2' ><li><p><strong><span>作业部落 Cmd Markdown</span></strong></p><ul><li><span>优点：有网页版，甚至可以不下载在线使用，支持多平台，支持自动云端保存（需登录），支持把自己的文稿发布于作业部落官方提供的平台，支持 LaTeX 公式和公式块，支持高效绘制流程图（用代码），有可视化操作按钮；</span></li><li><span>缺点：大部分功能需要注册登录，一些功能（如上传图片、导出完整 PDF 和网页等）还需要会员，对生态锁得比较死，编辑器偶尔会出现显示错误的 bug，非开源；</span></li><li><span>适合人群：同上，同时有便捷分享和作图床使用的需求。</span></li></ul></li></ol><h3 id='联动软件推荐-1'><span>联动软件推荐</span></h3><ol start='' ><li><p><strong><span>PicGo</span></strong></p><p><span>上面已经提到了，需要在类似 GitHub 一类提供文件 / 代码托管服务的平台上建立仓库，PicGo 会使用 Token 的形式得到上传许可并提交更新到远程仓库。只需要简单的配置也可以实现使用第三方 CDN 加速（比如我使用的是免费开源的公共 CDN：jsDelivr，相对应的图片网址就改为 </span><code>https://cdn.jsdelivr.net/gh/[directory_in_GH_Repo]</code><span>），这样在 Typora 中开启 PicGo 的联动功能就可以把复制进去的图片一口气上传到自己的对应仓库并更改引用链接为经过加速的链接。</span></p></li></ol><p>&nbsp;</p><h2 id='latex\n'><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="5.788ex" height="2.108ex" role="img" focusable="false" viewBox="0 -716.3 2558.3 931.8" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.488ex;"><defs><path id="MJX-62-TEX-N-4C" d="M128 622Q121 629 117 631T101 634T58 637H25V683H36Q48 680 182 680Q324 680 348 683H360V637H333Q273 637 258 635T233 622L232 342V129Q232 57 237 52Q243 47 313 47Q384 47 410 53Q470 70 498 110T536 221Q536 226 537 238T540 261T542 272T562 273H582V268Q580 265 568 137T554 5V0H25V46H58Q100 47 109 49T128 61V622Z"></path><path id="MJX-62-TEX-N-41" d="M255 0Q240 3 140 3Q48 3 39 0H32V46H47Q119 49 139 88Q140 91 192 245T295 553T348 708Q351 716 366 716H376Q396 715 400 709Q402 707 508 390L617 67Q624 54 636 51T687 46H717V0H708Q699 3 581 3Q458 3 437 0H427V46H440Q510 46 510 64Q510 66 486 138L462 209H229L209 150Q189 91 189 85Q189 72 209 59T259 46H264V0H255ZM447 255L345 557L244 256Q244 255 345 255H447Z"></path><path id="MJX-62-TEX-N-54" d="M36 443Q37 448 46 558T55 671V677H666V671Q667 666 676 556T685 443V437H645V443Q645 445 642 478T631 544T610 593Q593 614 555 625Q534 630 478 630H451H443Q417 630 414 618Q413 616 413 339V63Q420 53 439 50T528 46H558V0H545L361 3Q186 1 177 0H164V46H194Q264 46 283 49T309 63V339V550Q309 620 304 625T271 630H244H224Q154 630 119 601Q101 585 93 554T81 486T76 443V437H36V443Z"></path><path id="MJX-62-TEX-N-45" d="M128 619Q121 626 117 628T101 631T58 634H25V680H597V676Q599 670 611 560T625 444V440H585V444Q584 447 582 465Q578 500 570 526T553 571T528 601T498 619T457 629T411 633T353 634Q266 634 251 633T233 622Q233 622 233 621Q232 619 232 497V376H286Q359 378 377 385Q413 401 416 469Q416 471 416 473V493H456V213H416V233Q415 268 408 288T383 317T349 328T297 330Q290 330 286 330H232V196V114Q232 57 237 52Q243 47 289 47H340H391Q428 47 452 50T505 62T552 92T584 146Q594 172 599 200T607 247T612 270V273H652V270Q651 267 632 137T610 3V0H25V46H58Q100 47 109 49T128 61V619Z"></path><path id="MJX-62-TEX-N-58" d="M270 0Q252 3 141 3Q46 3 31 0H23V46H40Q129 50 161 88Q165 94 244 216T324 339Q324 341 235 480T143 622Q133 631 119 634T57 637H37V683H46Q64 680 172 680Q297 680 318 683H329V637H324Q307 637 286 632T263 621Q263 618 322 525T384 431Q385 431 437 511T489 593Q490 595 490 599Q490 611 477 622T436 637H428V683H437Q455 680 566 680Q661 680 676 683H684V637H667Q585 634 551 599Q548 596 478 491Q412 388 412 387Q412 385 514 225T620 62Q628 53 642 50T695 46H726V0H717Q699 3 591 3Q466 3 445 0H434V46H440Q454 46 476 51T499 64Q499 67 463 124T390 238L353 295L350 292Q348 290 343 283T331 265T312 236T286 195Q219 88 218 84Q218 70 234 59T272 46H280V0H270Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><use data-c="4C" xlink:href="#MJX-62-TEX-N-4C"></use></g><g data-mml-node="mspace" transform="translate(625,0)"></g><g data-mml-node="mpadded" transform="translate(300,0)"><g transform="translate(0,210)"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mstyle" transform="scale(0.707)"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><use data-c="41" xlink:href="#MJX-62-TEX-N-41"></use></g></g></g></g></g></g><g data-mml-node="mspace" transform="translate(830.3,0)"></g><g data-mml-node="mi" transform="translate(660.3,0)"><use data-c="54" xlink:href="#MJX-62-TEX-N-54"></use></g><g data-mml-node="mspace" transform="translate(1382.3,0)"></g><g data-mml-node="mpadded" transform="translate(1242.3,0)"><g transform="translate(0,-215.5)"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><use data-c="45" xlink:href="#MJX-62-TEX-N-45"></use></g></g></g></g><g data-mml-node="mspace" transform="translate(1923.3,0)"></g><g data-mml-node="mi" transform="translate(1808.3,0)"><use data-c="58" xlink:href="#MJX-62-TEX-N-58"></use></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow data-mjx-texclass="ORD"><mi data-mjx-auto-op="false" mathvariant="normal">L</mi><mspace width="-.325em"></mspace><mpadded height="+.21em" depth="-.21em" voffset="+.21em"><mrow data-mjx-texclass="ORD"><mstyle displaystyle="false" scriptlevel="1"><mrow data-mjx-texclass="ORD"><mi data-mjx-auto-op="false" mathvariant="normal">A</mi></mrow></mstyle></mrow></mpadded><mspace width="-.17em"></mspace><mi data-mjx-auto-op="false" mathvariant="normal">T</mi><mspace width="-.14em"></mspace><mpadded height="-.5ex" depth="+.5ex" voffset="-.5ex"><mrow data-mjx-texclass="ORD"><mi data-mjx-auto-op="false" mathvariant="normal">E</mi></mrow></mpadded><mspace width="-.115em"></mspace><mi data-mjx-auto-op="false" mathvariant="normal">X</mi></mrow></math></mjx-assistive-mml></mjx-container><script type="math/tex">\mathrm{\LaTeX}</script><span>​</span></h2><h3 id='简介-2'><span>简介</span></h3><p><span>上面说到 Word 属于排版工具，那科研排版能用 Word ……吗？</span></p><p><span>答案也是不行的（Word 就是废物啊）。Word 在公式编辑方面极不规范，极易导致公式在复制粘贴或者格式转换后就不能用了，加上还有行间使用的表示数学符号的如 </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="1.348ex" height="2.034ex" role="img" focusable="false" viewBox="0 -694 596 899" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.464ex;"><defs><path id="MJX-7-TEX-I-1D719" d="M409 688Q413 694 421 694H429H442Q448 688 448 686Q448 679 418 563Q411 535 404 504T392 458L388 442Q388 441 397 441T429 435T477 418Q521 397 550 357T579 260T548 151T471 65T374 11T279 -10H275L251 -105Q245 -128 238 -160Q230 -192 227 -198T215 -205H209Q189 -205 189 -198Q189 -193 211 -103L234 -11Q234 -10 226 -10Q221 -10 206 -8T161 6T107 36T62 89T43 171Q43 231 76 284T157 370T254 422T342 441Q347 441 348 445L378 567Q409 686 409 688ZM122 150Q122 116 134 91T167 53T203 35T237 27H244L337 404Q333 404 326 403T297 395T255 379T211 350T170 304Q152 276 137 237Q122 191 122 150ZM500 282Q500 320 484 347T444 385T405 400T381 404H378L332 217L284 29Q284 27 285 27Q293 27 317 33T357 47Q400 66 431 100T475 170T494 234T500 282Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D719" xlink:href="#MJX-7-TEX-I-1D719"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>ϕ</mi></math></mjx-assistive-mml></mjx-container><script type="math/tex">\phi</script><span>​​​ 之类都会出现错误显示的情况（变成 UTF-8 / Unicode 字符），还有规范引用文献的问题，即使现在一些教授可以接收 Word 编辑的实验报告和作业，以后需要正式地发表到一些出版平台（尤其是国外期刊的出版商，比如 Elsevier、IEEE、Springer、Wiley 等）大多需要使用规定的 </span><strong><span>LaTeX</span></strong><span> 模板进行排版，而且很可能完全不接受 Word 文档。这个时候学习使用 LaTeX 就很有必要。</span></p><p><span>LaTeX 是一种文字编辑的标准，是 TeX 标准上的扩展。编辑需要全程使用代码（有少数所见即所得式编辑器，但是我没试过就不推荐了）。通常 LaTeX 需要先声明使用的文章类别（</span><code>\documentclass{}</code><span>）和宏包（</span><code>\usepackage{}</code><span>），类似于在 C 语言中声明运行库（</span><code>#include&lt;stdio&gt;</code><span>）和定义函数（</span><code>#define [some function]</code><span>）的作用。其最大特点在于在文章中通过 </span><code>$ ... $</code><span> 或 </span><code>$$ ... $$</code><span> 在行中 / 行间表示数学环境（更正式可以使用 </span><code>\begin{equation} ... \end{equation}</code><span> 表示），如广义薛定谔方程：</span><code>$$\hat{H} \Psi = i \hbar \frac{\partial}{\partial t} \Psi$$</code><span> 即为 </span></p><div contenteditable="false" spellcheck="false" class="mathjax-block md-end-block md-math-block md-rawblock" id="mathjax-n254" cid="n254" mdtype="math_block" data-math-tag-before="0" data-math-tag-after="0" data-math-labels="[]"><div class="md-rawblock-container md-math-container" tabindex="-1"><mjx-container class="MathJax" jax="SVG" display="true" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="13.691ex" height="4.749ex" role="img" focusable="false" viewBox="0 -1391 6051.6 2099" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -1.602ex;"><defs><path id="MJX-63-TEX-I-1D43B" d="M228 637Q194 637 192 641Q191 643 191 649Q191 673 202 682Q204 683 219 683Q260 681 355 681Q389 681 418 681T463 682T483 682Q499 682 499 672Q499 670 497 658Q492 641 487 638H485Q483 638 480 638T473 638T464 637T455 637Q416 636 405 634T387 623Q384 619 355 500Q348 474 340 442T328 395L324 380Q324 378 469 378H614L615 381Q615 384 646 504Q674 619 674 627T617 637Q594 637 587 639T580 648Q580 650 582 660Q586 677 588 679T604 682Q609 682 646 681T740 680Q802 680 835 681T871 682Q888 682 888 672Q888 645 876 638H874Q872 638 869 638T862 638T853 637T844 637Q805 636 794 634T776 623Q773 618 704 340T634 58Q634 51 638 51Q646 48 692 46H723Q729 38 729 37T726 19Q722 6 716 0H701Q664 2 567 2Q533 2 504 2T458 2T437 1Q420 1 420 10Q420 15 423 24Q428 43 433 45Q437 46 448 46H454Q481 46 514 49Q520 50 522 50T528 55T534 64T540 82T547 110T558 153Q565 181 569 198Q602 330 602 331T457 332H312L279 197Q245 63 245 58Q245 51 253 49T303 46H334Q340 38 340 37T337 19Q333 6 327 0H312Q275 2 178 2Q144 2 115 2T69 2T48 1Q31 1 31 10Q31 12 34 24Q39 43 44 45Q48 46 59 46H65Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Q285 635 228 637Z"></path><path id="MJX-63-TEX-N-5E" d="M112 560L249 694L257 686Q387 562 387 560L361 531Q359 532 303 581L250 627L195 580Q182 569 169 557T148 538L140 532Q138 530 125 546L112 560Z"></path><path id="MJX-63-TEX-N-3A8" d="M340 622Q338 623 335 625T331 629T325 631T314 634T298 635T274 636T239 637H212V683H224Q248 680 389 680T554 683H566V637H539Q479 637 464 635T439 622L438 407Q438 192 439 192Q443 193 449 195T474 207T507 232T536 276T557 344Q560 365 562 417T573 493Q587 536 620 544Q627 546 671 546H715L722 540V515Q714 509 708 509Q680 505 671 476T658 392T644 307Q599 177 451 153L438 151V106L439 61Q446 54 451 52T476 48T539 46H566V0H554Q530 3 389 3T224 0H212V46H239Q259 46 273 46T298 47T314 48T325 51T331 54T335 57T340 61V151Q126 178 117 406Q115 503 69 509Q55 509 55 526Q55 541 59 543T86 546H107H120Q150 546 161 543T184 528Q198 514 204 493Q212 472 213 420T226 316T272 230Q287 216 303 207T330 194L339 192Q340 192 340 407V622Z"></path><path id="MJX-63-TEX-N-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path><path id="MJX-63-TEX-I-1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path><path id="MJX-63-TEX-V-210F" d="M182 599Q182 611 174 615T133 619Q118 619 114 621T109 630Q109 636 114 656T122 681Q125 685 202 688Q272 695 286 695Q304 695 304 684Q304 682 295 644T282 597Q282 592 360 592H399Q430 592 445 587T460 563Q460 552 451 541L442 535H266L251 468Q247 453 243 436T236 409T233 399Q233 395 244 404Q295 441 357 441Q405 441 445 417T485 333Q485 284 449 178T412 58T426 44Q447 44 466 68Q485 87 500 130L509 152H531H543Q562 152 562 144Q562 128 546 93T494 23T415 -13Q385 -13 359 3T322 44Q318 52 318 77Q318 99 352 196T386 337Q386 386 346 386Q318 386 286 370Q267 361 245 338T211 292Q207 287 193 235T162 113T138 21Q128 7 122 4Q105 -12 83 -12Q66 -12 54 -2T42 26L166 530Q166 534 161 534T129 535Q127 535 122 535T112 534Q74 534 74 562Q74 570 77 576T84 585T96 589T109 591T124 592T138 592L182 595V599Z"></path><path id="MJX-63-TEX-I-1D715" d="M202 508Q179 508 169 520T158 547Q158 557 164 577T185 624T230 675T301 710L333 715H345Q378 715 384 714Q447 703 489 661T549 568T566 457Q566 362 519 240T402 53Q321 -22 223 -22Q123 -22 73 56Q42 102 42 148V159Q42 276 129 370T322 465Q383 465 414 434T455 367L458 378Q478 461 478 515Q478 603 437 639T344 676Q266 676 223 612Q264 606 264 572Q264 547 246 528T202 508ZM430 306Q430 372 401 400T333 428Q270 428 222 382Q197 354 183 323T150 221Q132 149 132 116Q132 21 232 21Q244 21 250 22Q327 35 374 112Q389 137 409 196T430 306Z"></path><path id="MJX-63-TEX-I-1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path><path id="MJX-63-TEX-N-200B" d=""></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mover"><g data-mml-node="mi"><use data-c="1D43B" xlink:href="#MJX-63-TEX-I-1D43B"></use></g><g data-mml-node="mo" transform="translate(513.8,257) translate(-250 0)"><use data-c="5E" xlink:href="#MJX-63-TEX-N-5E"></use></g></g></g><g data-mml-node="mi" transform="translate(888,0)"><use data-c="3A8" xlink:href="#MJX-63-TEX-N-3A8"></use></g><g data-mml-node="mo" transform="translate(1943.8,0)"><use data-c="3D" xlink:href="#MJX-63-TEX-N-3D"></use></g><g data-mml-node="mi" transform="translate(2999.6,0)"><use data-c="1D456" xlink:href="#MJX-63-TEX-I-1D456"></use></g><g data-mml-node="mi" transform="translate(3344.6,0)"><use data-c="210F" xlink:href="#MJX-63-TEX-V-210F"></use></g><g data-mml-node="mfrac" transform="translate(3906.6,0)"><g data-mml-node="mi" transform="translate(400.5,676)"><use data-c="1D715" xlink:href="#MJX-63-TEX-I-1D715"></use></g><g data-mml-node="mrow" transform="translate(220,-686)"><g data-mml-node="mi"><use data-c="1D715" xlink:href="#MJX-63-TEX-I-1D715"></use></g><g data-mml-node="mi" transform="translate(566,0)"><use data-c="1D461" xlink:href="#MJX-63-TEX-I-1D461"></use></g></g><rect width="1127" height="60" x="120" y="220"></rect></g><g data-mml-node="mi" transform="translate(5273.6,0)"><use data-c="3A8" xlink:href="#MJX-63-TEX-N-3A8"></use></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(6051.6,0)"><g data-mml-node="mo"><use data-c="200B" xlink:href="#MJX-63-TEX-N-200B"></use></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow data-mjx-texclass="ORD"><mover><mi>H</mi><mo stretchy="false">^</mo></mover></mrow><mi mathvariant="normal">Ψ</mi><mo>=</mo><mi>i</mi><mi data-mjx-alternate="1">ℏ</mi><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mi mathvariant="normal">Ψ</mi><mrow data-mjx-texclass="ORD"><mo>​</mo></mrow></math></mjx-assistive-mml></mjx-container></div></div><p><span>，也可以很方便建立矩阵等；其次可以使用 </span><code>\ref{}</code><span> 和 </span><code>\label{}</code><span> 的标签做到很便捷的引用功能；文章的各个部分也可以分别在不同文件中写完，最后再使用主文章包含进去；参考文献也有专门的管理文件系统。另外对于化学类学生，LaTeX 同时支持简单的化学式表达和有机物绘制，如 </span><code>\ce{CH3COOH}</code><span> 即为 </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="11.114ex" height="1.97ex" role="img" focusable="false" viewBox="0 -705 4912.6 870.6" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.375ex;"><defs><path id="MJX-24-TEX-N-43" d="M56 342Q56 428 89 500T174 615T283 681T391 705Q394 705 400 705T408 704Q499 704 569 636L582 624L612 663Q639 700 643 704Q644 704 647 704T653 705H657Q660 705 666 699V419L660 413H626Q620 419 619 430Q610 512 571 572T476 651Q457 658 426 658Q322 658 252 588Q173 509 173 342Q173 221 211 151Q232 111 263 84T328 45T384 29T428 24Q517 24 571 93T626 244Q626 251 632 257H660L666 251V236Q661 133 590 56T403 -21Q262 -21 159 83T56 342Z"></path><path id="MJX-24-TEX-N-48" d="M128 622Q121 629 117 631T101 634T58 637H25V683H36Q57 680 180 680Q315 680 324 683H335V637H302Q262 636 251 634T233 622L232 500V378H517V622Q510 629 506 631T490 634T447 637H414V683H425Q446 680 569 680Q704 680 713 683H724V637H691Q651 636 640 634T622 622V61Q628 51 639 49T691 46H724V0H713Q692 3 569 3Q434 3 425 0H414V46H447Q489 47 498 49T517 61V332H232V197L233 61Q239 51 250 49T302 46H335V0H324Q303 3 180 3Q45 3 36 0H25V46H58Q100 47 109 49T128 61V622Z"></path><path id="MJX-24-TEX-N-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path><path id="MJX-24-TEX-N-4F" d="M56 340Q56 423 86 494T164 610T270 680T388 705Q521 705 621 601T722 341Q722 260 693 191T617 75T510 4T388 -22T267 3T160 74T85 189T56 340ZM467 647Q426 665 388 665Q360 665 331 654T269 620T213 549T179 439Q174 411 174 354Q174 144 277 61Q327 20 385 20H389H391Q474 20 537 99Q603 188 603 354Q603 411 598 439Q577 592 467 647Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><use data-c="43" xlink:href="#MJX-24-TEX-N-43"></use><use data-c="48" xlink:href="#MJX-24-TEX-N-48" transform="translate(722,0)"></use></g></g><g data-mml-node="msub" transform="translate(1472,0)"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mpadded"><g data-mml-node="mphantom"></g></g></g></g><g data-mml-node="TeXAtom" transform="translate(9,-150) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mpadded"><g data-mml-node="mn"><use data-c="33" xlink:href="#MJX-24-TEX-N-33"></use></g></g></g></g></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(1884.6,0)"><g data-mml-node="mi"><use data-c="43" xlink:href="#MJX-24-TEX-N-43"></use><use data-c="4F" xlink:href="#MJX-24-TEX-N-4F" transform="translate(722,0)"></use><use data-c="4F" xlink:href="#MJX-24-TEX-N-4F" transform="translate(1500,0)"></use><use data-c="48" xlink:href="#MJX-24-TEX-N-48" transform="translate(2278,0)"></use></g></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow data-mjx-texclass="ORD"><mrow data-mjx-texclass="ORD"><mi data-mjx-auto-op="false">CH</mi></mrow><msub><mrow data-mjx-texclass="ORD"><mrow data-mjx-texclass="ORD"><mpadded width="0"><mphantom><mi>X</mi></mphantom></mpadded></mrow></mrow><mrow data-mjx-texclass="ORD"><mrow data-mjx-texclass="ORD"><mpadded height="0"><mn>3</mn></mpadded></mrow></mrow></msub><mrow data-mjx-texclass="ORD"><mi data-mjx-auto-op="false">COOH</mi></mrow></mrow></math></mjx-assistive-mml></mjx-container><script type="math/tex">\ce{CH3COOH}</script><span>（需要使用 </span><code>mhchem</code><span> 宏包）​​​。</span></p><p><span>但说句实话，LaTeX 属于易学难精，日积月累才能灵活运用。即使 LaTeX 不是最方便的工具，它却是最符合科技文章规范的，而且在引用和公式这两点上 Word 反正是望尘莫及。我用 LaTeX 写各种报告和作业已经 3 年有余，现在也尝试使用 LaTeX 制作简历、幻灯片等材料，观感上还是很不错的。</span></p><h3 id='推荐软件-2'><span>推荐软件</span></h3><ol start='' ><li><p><strong><span>WinEdt</span></strong></p><p><span>如果对中文有需求推荐直接使用（基于 WinEdt 编辑器的）CTeX，对中文有较好支持。</span></p><ul><li><span>优点：功能完善，基本上作为 LaTeX 编辑器需要的功能他都有提供，支持大量 TeX 系列程序，支持拼写检查，有希腊字母和数学符号等的 GUI 菜单，很适合新人入门，支持多标签页，支持；</span></li><li><span>缺点：也太难用了吧，简直是〇〇，且不提本身是非免费不开源的商业软件，每次写完都得手动点编译（如果是使用非原生字体还需要调用 XeLaTeX 程序，不能够使用快捷键），本身不整合 PDF 预览器（通常是要外部调用 SumatraPDF），只支持 Windows，还好像没中文……；</span></li><li><span>适合人群：从入门到入土。</span></li></ul></li><li><p><strong><span>Overleaf</span></strong></p><p><span>我可不信你在谷歌搜 LaTeX 会没见过这玩意……</span></p><ul><li><span>优点：多人合作（别问我体验如何，笑死我周围根本没人用 LaTeX），在线编辑，支持自动保存，相对美观的 UI，有大量模板可以使用，便捷的项目管理，支持代码自动补完，支持非严谨语法（比如不在数学环境中调用部分数学公式）；</span></li><li><span>缺点：非严谨语法但很可能不能被其他软件识别，也不适合新手入门学习语法，没有常用字符菜单；</span></li><li><span>适合人群：过了萌新期，以及需要合作编辑的人。</span></li></ul></li><li><p><strong><span>Visual Studio Code</span></strong></p><ul><li><span>优点：VSCode 有什么优点就有什么优点（搁这搁这呢），开源；</span></li><li><span>缺点：无内置预览器等，需要手动配置环境和 SumatraPDF 之类的预览器，对新手来说不友好；</span></li><li><span>适合人群：已经熟悉掌握了 LaTeX 语法和有一定手动配置环境等基础的人。</span></li></ul></li></ol><h3 id='联动软件推荐-2'><span>联动软件推荐</span></h3><ol start='' ><li><p><strong><span>Mathpix Snipping Tool</span></strong></p><p><span>遇到了 PDF 或者图像里（甚至是手写）的公式没办法复制自己打又太麻烦？那就应该试试这个神器了。Mathpix Snipping Tool 提供了对数学公式优化得最好的 OCR，只需要截图（或者用手机端拍照）就可以显示出来正确的 LaTeX 公式，识别率不低但是毕竟 OCR 还是做不到 100%，反正可以极大方便新手和懒人（我），而且最好的是还支持 Word 的公式格式，即使不是 LaTeX 党也可以轻松使用。</span></p></li><li><p><strong><span>gnuplot</span></strong></p><p><span>不是，不会这年头还有人用 gnuplot 吧，不会吧不会吧（x</span></p><p><span>gnuplot 是一个 Linux 平台的命令行交互式绘图工具（当然也可以在 Windows 上使用，是基于 Cygwin 虚拟机的移植），虽然很难用但是碍于能和 LaTeX 联动使用就不骂他了，而且可以使用线性插值平滑图像（你 MATLAB 做得到吗？.jpg）。使用 gnuplot 作图结束之后可以使用 </span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="Bash"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">set</span> terminal epslatex </span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">set</span> output <span class="cm-string">'[Filename].tex'</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">plot <span class="cm-string">"[DataFile].dat"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">set</span> output</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 96px;"></div><div class="CodeMirror-gutters" style="display: none; height: 96px;"></div></div></div></pre><p><span>命令来实现导出供 LaTeX 导出的 </span><code>.tex</code><span> 文件和相同文件名的 </span><code>.eps</code><span> 文件。在 LaTeX 中使用 </span><code>\input{[Filename].tex}</code><span> 即可将矢量图像导入到文档中（推荐加上 </span><code>\begin{figure} ... \end{figure}</code><span> 的指令，以插入图形的形式更好地规定一些其他参数）。</span></p></li><li><p><strong><span>Excel</span></strong></p><p><span>即使是使用了很长时间的人也经常会有 LaTeX 做表格很不方便的感觉，那能不能把 Excel 表格导入到 LaTeX 呢，这里就需要用到一个插件：</span><strong><span>Excel2LaTeX</span></strong></p><p><span>安装完成之后，需要手动在 </span><code>File - Options - Add-ins - Manage</code><span> 中手动启用，此后就会显示在最上方工具栏的 </span><code>Add-ins</code><span>，在 Excel 中选择合适的表格区域再打开这个插件 </span><code>Convert table to LaTeX</code><span> 按钮就可以调整各种参数和导出所需的 LaTeX 版本的表格了，对应的表格线也会被一并加入。注意可能会需要用到一些其他的宏包以避免报错。</span></p><p>&nbsp;</p></li></ol></div></div>
+"><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="5.788ex" height="2.108ex" role="img" focusable="false" viewBox="0 -716.3 2558.3 931.8" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.488ex;" class=""><defs><path id="MJX-122-TEX-N-4C" d="M128 622Q121 629 117 631T101 634T58 637H25V683H36Q48 680 182 680Q324 680 348 683H360V637H333Q273 637 258 635T233 622L232 342V129Q232 57 237 52Q243 47 313 47Q384 47 410 53Q470 70 498 110T536 221Q536 226 537 238T540 261T542 272T562 273H582V268Q580 265 568 137T554 5V0H25V46H58Q100 47 109 49T128 61V622Z"></path><path id="MJX-122-TEX-N-41" d="M255 0Q240 3 140 3Q48 3 39 0H32V46H47Q119 49 139 88Q140 91 192 245T295 553T348 708Q351 716 366 716H376Q396 715 400 709Q402 707 508 390L617 67Q624 54 636 51T687 46H717V0H708Q699 3 581 3Q458 3 437 0H427V46H440Q510 46 510 64Q510 66 486 138L462 209H229L209 150Q189 91 189 85Q189 72 209 59T259 46H264V0H255ZM447 255L345 557L244 256Q244 255 345 255H447Z"></path><path id="MJX-122-TEX-N-54" d="M36 443Q37 448 46 558T55 671V677H666V671Q667 666 676 556T685 443V437H645V443Q645 445 642 478T631 544T610 593Q593 614 555 625Q534 630 478 630H451H443Q417 630 414 618Q413 616 413 339V63Q420 53 439 50T528 46H558V0H545L361 3Q186 1 177 0H164V46H194Q264 46 283 49T309 63V339V550Q309 620 304 625T271 630H244H224Q154 630 119 601Q101 585 93 554T81 486T76 443V437H36V443Z"></path><path id="MJX-122-TEX-N-45" d="M128 619Q121 626 117 628T101 631T58 634H25V680H597V676Q599 670 611 560T625 444V440H585V444Q584 447 582 465Q578 500 570 526T553 571T528 601T498 619T457 629T411 633T353 634Q266 634 251 633T233 622Q233 622 233 621Q232 619 232 497V376H286Q359 378 377 385Q413 401 416 469Q416 471 416 473V493H456V213H416V233Q415 268 408 288T383 317T349 328T297 330Q290 330 286 330H232V196V114Q232 57 237 52Q243 47 289 47H340H391Q428 47 452 50T505 62T552 92T584 146Q594 172 599 200T607 247T612 270V273H652V270Q651 267 632 137T610 3V0H25V46H58Q100 47 109 49T128 61V619Z"></path><path id="MJX-122-TEX-N-58" d="M270 0Q252 3 141 3Q46 3 31 0H23V46H40Q129 50 161 88Q165 94 244 216T324 339Q324 341 235 480T143 622Q133 631 119 634T57 637H37V683H46Q64 680 172 680Q297 680 318 683H329V637H324Q307 637 286 632T263 621Q263 618 322 525T384 431Q385 431 437 511T489 593Q490 595 490 599Q490 611 477 622T436 637H428V683H437Q455 680 566 680Q661 680 676 683H684V637H667Q585 634 551 599Q548 596 478 491Q412 388 412 387Q412 385 514 225T620 62Q628 53 642 50T695 46H726V0H717Q699 3 591 3Q466 3 445 0H434V46H440Q454 46 476 51T499 64Q499 67 463 124T390 238L353 295L350 292Q348 290 343 283T331 265T312 236T286 195Q219 88 218 84Q218 70 234 59T272 46H280V0H270Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><use data-c="4C" xlink:href="#MJX-122-TEX-N-4C"></use></g><g data-mml-node="mspace" transform="translate(625,0)"></g><g data-mml-node="mpadded" transform="translate(300,0)"><g transform="translate(0,210)"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mstyle" transform="scale(0.707)"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><use data-c="41" xlink:href="#MJX-122-TEX-N-41"></use></g></g></g></g></g></g><g data-mml-node="mspace" transform="translate(830.3,0)"></g><g data-mml-node="mi" transform="translate(660.3,0)"><use data-c="54" xlink:href="#MJX-122-TEX-N-54"></use></g><g data-mml-node="mspace" transform="translate(1382.3,0)"></g><g data-mml-node="mpadded" transform="translate(1242.3,0)"><g transform="translate(0,-215.5)"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><use data-c="45" xlink:href="#MJX-122-TEX-N-45"></use></g></g></g></g><g data-mml-node="mspace" transform="translate(1923.3,0)"></g><g data-mml-node="mi" transform="translate(1808.3,0)"><use data-c="58" xlink:href="#MJX-122-TEX-N-58"></use></g></g></g></g></svg></mjx-container><script type="math/tex">\mathrm{\LaTeX}</script>​</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#简介-2">简介</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#推荐软件-2">推荐软件</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#联动软件推荐-2">联动软件推荐</a></div><ul class="outline-children"></ul></li></ul></li></ul></li></div></div><div id='write'  class=''><h1 id='软件推荐-1---学术科研类'><span>软件推荐 1 - 学术科研类</span></h1><p><span>平常在学习工作或者科研实验的时候，经常会遇到软件不知道怎么选的问题，尤其是当有标准化的需求，比如文字排版、图表制作等，或者想要降低试错成本。本文将非常主观地结合一些个人使用经验帮助可能有需要的同学找到合适的软件和工具。</span></p><hr /><h2 id='markdown'><span>Markdown</span></h2><div>
+	<center>
+	<img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_MD.png" alt="Markdown" style="zoom:28%;">
+    <br>
+    Markdown Logo
+</center></div><h3 id='简介-1'><span>简介</span></h3><p><span>很多人想到起草文稿或者记笔记肯定会先想到 Microsoft Office 系列的 Word、One Note、记事本等，但是 Word 实际是属于相对正式的排版软件而非码字软件，会让人觉得有些不顺手也很正常（各种很血压的情况大家也应该遇到不少）；而用系统自带的记事本或写字板，功能不齐全，插图打代码什么的也不方便；Notability 好用是真好用，但也不是所有人都能有 iPad（也不是所有人能能喜欢在 iPad 上手写），如果是纯 PC 党或者需要带代码高亮等情况就很不适合。</span></p><p><span>在此，隆重推荐最适合码字的工具：</span><strong><span>Markdown</span></strong></p><p><span>MarkDown 属于轻量级的标记语言，通过纯文本格式编写并生成可实时预览的 XHTML 文档，而且对图片、表格、公式、超链接、代码高亮皆有支持（部分功能不是所有编辑器都有）。目前很多网站和论坛也支持使用 Markdown 编辑，如 GitHub、CSDN、简书、Reddit 等。大部分编辑器也都是免费甚至是开源的，对学生而言十分友好。另外其语法十分简单，如用 </span><code>#</code><span> 和多个 </span><code>#</code><span> 表示不同大纲等级的标题；用 </span><code>-</code><span> 表示无序列表，用 </span><code>* ... *</code><span> 和 </span><code>** ... **</code><span> 表示斜体和粗体，用 </span><code>![图片标题](超链接)</code><span> 引用图片（部分编辑器还支持本地图片引用）等，上手极快。</span></p><h3 id='推荐软件-1'><span>推荐软件</span></h3><ol start='' ><li><p><strong><span>Typora</span></strong><span>（本文档都是用 Typora 进行编写）</span></p><p><img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_Typora.png" referrerpolicy="no-referrer" alt="Typora"></p><blockquote><p><span> </span><strong><span>推荐指数：10/10</span></strong></p></blockquote><p><span>Typora 是目前少数可实时像 Word 一样预览内容的 Markdown 的编辑器（实际上是网页浏览器，可以使用 </span><code>shift + F12</code><span> 调出控制台）</span></p><ul><li><span>优点：无需登录，支持多平台，界面很简洁美观，所见即所得，支持自定义主题（有 GitHub 主题页面），可以直接看大纲目录，也支持很多 Word 系快捷键，支持绝大部分 HTML / CSS 标签，支持自动保存，支持 LaTeX​ 公式和公式块，支持本地图片复制粘贴，如果配合 PicGo + GitHub 之类作为图床还可以实现图片自动上传并添加 URL 链接甚至是 CDN 加速访问，支持智能标点，支持 PDF、LaTeX、Word、网页等多种格式导出；</span></li><li><span>缺点：不是传统 Markdown 编辑器，如果喜欢传统的分屏用代码控制 + 实时预览的话会不太合适，非开源，可能有少量 bug（比如在写这篇文章的时候自动保存失效了一次，怨念）；</span></li><li><span>适合人群：频繁使用电脑做笔记、写草稿等需要快速记录的工作而且可能需要打公式和代码块的人。</span></li></ul><div>
+	<center>
+	<img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_Typora_Screen.png" alt="Typora Screenshot" style="zoom:60%;">
+    <br>
+    Typora 的用户界面
+</center></div></li></ol><ol start='2' ><li><p><strong><span>作业部落 Cmd Markdown</span></strong></p><p><img src="https://www.zybuluo.com/static/img/logo.png" referrerpolicy="no-referrer" alt="CMD Logo"></p><blockquote><p><strong><span>推荐指数：8/10</span></strong></p></blockquote><ul><li><span>优点：有网页版，甚至可以不下载在线使用，支持多平台，支持自动云端保存（需登录），支持把自己的文稿发布于作业部落官方提供的平台，支持 LaTeX 公式和公式块，支持高效绘制流程图（用代码），有可视化操作按钮；</span></li><li><span>缺点：大部分功能需要注册登录，一些功能（如上传图片、导出完整 PDF 和网页等）还需要会员，对生态锁得比较死，编辑器偶尔会出现显示错误的 bug，非开源；</span></li><li><span>适合人群：同上，同时有便捷分享和作图床使用的需求。</span></li></ul><div>
+	<center>
+	<img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_CMD_Screen.png" alt="CMD Screenshot" style="zoom:60%;">
+    <br>
+    作业部落 CMD Markdown 的用户界面
+</center></div></li></ol><h3 id='联动软件推荐-1'><span>联动软件推荐</span></h3><ol start='' ><li><p><strong><span>PicGo</span></strong></p><p><span>上面已经提到了，需要在类似 GitHub 一类提供文件 / 代码托管服务的平台上建立仓库，PicGo 会使用 Token 的形式得到上传许可并提交更新到远程仓库。只需要简单的配置也可以实现使用第三方 CDN 加速（比如我使用的是免费开源的公共 CDN：jsDelivr，相对应的图片网址就改为 </span><code>https://cdn.jsdelivr.net/gh/[directory_in_GH_Repo]</code><span>），这样在 Typora 中开启 PicGo 的联动功能就可以把复制进去的图片一口气上传到自己的对应仓库并更改引用链接为经过加速的链接。</span></p></li></ol><p>&nbsp;</p><h2 id='latex\n'><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="5.788ex" height="2.108ex" role="img" focusable="false" viewBox="0 -716.3 2558.3 931.8" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.488ex;" class=""><defs><path id="MJX-122-TEX-N-4C" d="M128 622Q121 629 117 631T101 634T58 637H25V683H36Q48 680 182 680Q324 680 348 683H360V637H333Q273 637 258 635T233 622L232 342V129Q232 57 237 52Q243 47 313 47Q384 47 410 53Q470 70 498 110T536 221Q536 226 537 238T540 261T542 272T562 273H582V268Q580 265 568 137T554 5V0H25V46H58Q100 47 109 49T128 61V622Z"></path><path id="MJX-122-TEX-N-41" d="M255 0Q240 3 140 3Q48 3 39 0H32V46H47Q119 49 139 88Q140 91 192 245T295 553T348 708Q351 716 366 716H376Q396 715 400 709Q402 707 508 390L617 67Q624 54 636 51T687 46H717V0H708Q699 3 581 3Q458 3 437 0H427V46H440Q510 46 510 64Q510 66 486 138L462 209H229L209 150Q189 91 189 85Q189 72 209 59T259 46H264V0H255ZM447 255L345 557L244 256Q244 255 345 255H447Z"></path><path id="MJX-122-TEX-N-54" d="M36 443Q37 448 46 558T55 671V677H666V671Q667 666 676 556T685 443V437H645V443Q645 445 642 478T631 544T610 593Q593 614 555 625Q534 630 478 630H451H443Q417 630 414 618Q413 616 413 339V63Q420 53 439 50T528 46H558V0H545L361 3Q186 1 177 0H164V46H194Q264 46 283 49T309 63V339V550Q309 620 304 625T271 630H244H224Q154 630 119 601Q101 585 93 554T81 486T76 443V437H36V443Z"></path><path id="MJX-122-TEX-N-45" d="M128 619Q121 626 117 628T101 631T58 634H25V680H597V676Q599 670 611 560T625 444V440H585V444Q584 447 582 465Q578 500 570 526T553 571T528 601T498 619T457 629T411 633T353 634Q266 634 251 633T233 622Q233 622 233 621Q232 619 232 497V376H286Q359 378 377 385Q413 401 416 469Q416 471 416 473V493H456V213H416V233Q415 268 408 288T383 317T349 328T297 330Q290 330 286 330H232V196V114Q232 57 237 52Q243 47 289 47H340H391Q428 47 452 50T505 62T552 92T584 146Q594 172 599 200T607 247T612 270V273H652V270Q651 267 632 137T610 3V0H25V46H58Q100 47 109 49T128 61V619Z"></path><path id="MJX-122-TEX-N-58" d="M270 0Q252 3 141 3Q46 3 31 0H23V46H40Q129 50 161 88Q165 94 244 216T324 339Q324 341 235 480T143 622Q133 631 119 634T57 637H37V683H46Q64 680 172 680Q297 680 318 683H329V637H324Q307 637 286 632T263 621Q263 618 322 525T384 431Q385 431 437 511T489 593Q490 595 490 599Q490 611 477 622T436 637H428V683H437Q455 680 566 680Q661 680 676 683H684V637H667Q585 634 551 599Q548 596 478 491Q412 388 412 387Q412 385 514 225T620 62Q628 53 642 50T695 46H726V0H717Q699 3 591 3Q466 3 445 0H434V46H440Q454 46 476 51T499 64Q499 67 463 124T390 238L353 295L350 292Q348 290 343 283T331 265T312 236T286 195Q219 88 218 84Q218 70 234 59T272 46H280V0H270Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><use data-c="4C" xlink:href="#MJX-122-TEX-N-4C"></use></g><g data-mml-node="mspace" transform="translate(625,0)"></g><g data-mml-node="mpadded" transform="translate(300,0)"><g transform="translate(0,210)"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mstyle" transform="scale(0.707)"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><use data-c="41" xlink:href="#MJX-122-TEX-N-41"></use></g></g></g></g></g></g><g data-mml-node="mspace" transform="translate(830.3,0)"></g><g data-mml-node="mi" transform="translate(660.3,0)"><use data-c="54" xlink:href="#MJX-122-TEX-N-54"></use></g><g data-mml-node="mspace" transform="translate(1382.3,0)"></g><g data-mml-node="mpadded" transform="translate(1242.3,0)"><g transform="translate(0,-215.5)"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><use data-c="45" xlink:href="#MJX-122-TEX-N-45"></use></g></g></g></g><g data-mml-node="mspace" transform="translate(1923.3,0)"></g><g data-mml-node="mi" transform="translate(1808.3,0)"><use data-c="58" xlink:href="#MJX-122-TEX-N-58"></use></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow data-mjx-texclass="ORD"><mi data-mjx-auto-op="false" mathvariant="normal">L</mi><mspace width="-.325em"></mspace><mpadded height="+.21em" depth="-.21em" voffset="+.21em"><mrow data-mjx-texclass="ORD"><mstyle displaystyle="false" scriptlevel="1"><mrow data-mjx-texclass="ORD"><mi data-mjx-auto-op="false" mathvariant="normal">A</mi></mrow></mstyle></mrow></mpadded><mspace width="-.17em"></mspace><mi data-mjx-auto-op="false" mathvariant="normal">T</mi><mspace width="-.14em"></mspace><mpadded height="-.5ex" depth="+.5ex" voffset="-.5ex"><mrow data-mjx-texclass="ORD"><mi data-mjx-auto-op="false" mathvariant="normal">E</mi></mrow></mpadded><mspace width="-.115em"></mspace><mi data-mjx-auto-op="false" mathvariant="normal">X</mi></mrow></math></mjx-assistive-mml></mjx-container><script type="math/tex">\mathrm{\LaTeX}</script><span>​</span></h2><h3 id='简介-2'><span>简介</span></h3><p><span>上面说到 Word 属于排版工具，那科研排版能用 Word ……吗？</span></p><blockquote><p><span>Word：你再骂？</span></p></blockquote><p><span>答案也是不行的（Word 就是废物啊）。Word 在公式编辑方面极不规范，极易导致公式在复制粘贴或者格式转换后就无法使用，加上还有行间使用的表示数学符号的如 </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="1.348ex" height="2.034ex" role="img" focusable="false" viewBox="0 -694 596 899" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.464ex;"><defs><path id="MJX-7-TEX-I-1D719" d="M409 688Q413 694 421 694H429H442Q448 688 448 686Q448 679 418 563Q411 535 404 504T392 458L388 442Q388 441 397 441T429 435T477 418Q521 397 550 357T579 260T548 151T471 65T374 11T279 -10H275L251 -105Q245 -128 238 -160Q230 -192 227 -198T215 -205H209Q189 -205 189 -198Q189 -193 211 -103L234 -11Q234 -10 226 -10Q221 -10 206 -8T161 6T107 36T62 89T43 171Q43 231 76 284T157 370T254 422T342 441Q347 441 348 445L378 567Q409 686 409 688ZM122 150Q122 116 134 91T167 53T203 35T237 27H244L337 404Q333 404 326 403T297 395T255 379T211 350T170 304Q152 276 137 237Q122 191 122 150ZM500 282Q500 320 484 347T444 385T405 400T381 404H378L332 217L284 29Q284 27 285 27Q293 27 317 33T357 47Q400 66 431 100T475 170T494 234T500 282Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D719" xlink:href="#MJX-7-TEX-I-1D719"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>ϕ</mi></math></mjx-assistive-mml></mjx-container><script type="math/tex">\phi</script><span>​​​​ 之类都会出现错误显示的情况（变成 UTF-8 / Unicode 字符），还有规范引用文献的问题，即使现在一些教授可以接收 Word 编辑的实验报告和作业，以后需要正式地发表到一些出版平台（尤其是国外期刊的出版商，比如 Elsevier、IEEE、Springer、Wiley 等）大多需要使用规定的 </span><strong><span>LaTeX</span></strong><span> 模板进行排版，而且很可能完全不接受 Word 文档。这个时候学习使用 LaTeX 就很有必要。</span></p><div>
+	<center>
+	<img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_LaTeX.svg" alt="LaTeX" style="zoom:70%;">
+    <br>
+    The LaTeX Project
+</center></div><p><span>LaTeX 是一种文字编辑的标准，是 TeX 标准上的扩展。编辑需要全程使用代码（有少数所见即所得式编辑器，但是我没试过就不推荐了）。通常 LaTeX 需要先声明使用的文章类别（</span><code>\documentclass{}</code><span>）和宏包（</span><code>\usepackage{}</code><span>），类似于在 C 语言中声明运行库（</span><code>#include&lt;stdio&gt;</code><span>）和定义函数（</span><code>#define [some function]</code><span>）的作用。其最大特点在于在文章中通过 </span><code>$ ... $</code><span> 或 </span><code>$$ ... $$</code><span> 在行中 / 行间表示数学环境（更正式可以使用 </span><code>\begin{equation} ... \end{equation}</code><span> 表示），如广义薛定谔方程：</span><code>$$\hat{H} \Psi = i \hbar \frac{\partial}{\partial t} \Psi$$</code><span> 即为 </span></p><div contenteditable="false" spellcheck="false" class="mathjax-block md-end-block md-math-block md-rawblock" id="mathjax-n495" cid="n495" mdtype="math_block" data-math-tag-before="0" data-math-tag-after="0" data-math-labels="[]"><div class="md-rawblock-container md-math-container" contenteditable="false" tabindex="-1"><mjx-container class="MathJax" jax="SVG" display="true" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="13.691ex" height="4.749ex" role="img" focusable="false" viewBox="0 -1391 6051.6 2099" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -1.602ex;"><defs><path id="MJX-120-TEX-I-1D43B" d="M228 637Q194 637 192 641Q191 643 191 649Q191 673 202 682Q204 683 219 683Q260 681 355 681Q389 681 418 681T463 682T483 682Q499 682 499 672Q499 670 497 658Q492 641 487 638H485Q483 638 480 638T473 638T464 637T455 637Q416 636 405 634T387 623Q384 619 355 500Q348 474 340 442T328 395L324 380Q324 378 469 378H614L615 381Q615 384 646 504Q674 619 674 627T617 637Q594 637 587 639T580 648Q580 650 582 660Q586 677 588 679T604 682Q609 682 646 681T740 680Q802 680 835 681T871 682Q888 682 888 672Q888 645 876 638H874Q872 638 869 638T862 638T853 637T844 637Q805 636 794 634T776 623Q773 618 704 340T634 58Q634 51 638 51Q646 48 692 46H723Q729 38 729 37T726 19Q722 6 716 0H701Q664 2 567 2Q533 2 504 2T458 2T437 1Q420 1 420 10Q420 15 423 24Q428 43 433 45Q437 46 448 46H454Q481 46 514 49Q520 50 522 50T528 55T534 64T540 82T547 110T558 153Q565 181 569 198Q602 330 602 331T457 332H312L279 197Q245 63 245 58Q245 51 253 49T303 46H334Q340 38 340 37T337 19Q333 6 327 0H312Q275 2 178 2Q144 2 115 2T69 2T48 1Q31 1 31 10Q31 12 34 24Q39 43 44 45Q48 46 59 46H65Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Q285 635 228 637Z"></path><path id="MJX-120-TEX-N-5E" d="M112 560L249 694L257 686Q387 562 387 560L361 531Q359 532 303 581L250 627L195 580Q182 569 169 557T148 538L140 532Q138 530 125 546L112 560Z"></path><path id="MJX-120-TEX-N-3A8" d="M340 622Q338 623 335 625T331 629T325 631T314 634T298 635T274 636T239 637H212V683H224Q248 680 389 680T554 683H566V637H539Q479 637 464 635T439 622L438 407Q438 192 439 192Q443 193 449 195T474 207T507 232T536 276T557 344Q560 365 562 417T573 493Q587 536 620 544Q627 546 671 546H715L722 540V515Q714 509 708 509Q680 505 671 476T658 392T644 307Q599 177 451 153L438 151V106L439 61Q446 54 451 52T476 48T539 46H566V0H554Q530 3 389 3T224 0H212V46H239Q259 46 273 46T298 47T314 48T325 51T331 54T335 57T340 61V151Q126 178 117 406Q115 503 69 509Q55 509 55 526Q55 541 59 543T86 546H107H120Q150 546 161 543T184 528Q198 514 204 493Q212 472 213 420T226 316T272 230Q287 216 303 207T330 194L339 192Q340 192 340 407V622Z"></path><path id="MJX-120-TEX-N-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path><path id="MJX-120-TEX-I-1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path><path id="MJX-120-TEX-V-210F" d="M182 599Q182 611 174 615T133 619Q118 619 114 621T109 630Q109 636 114 656T122 681Q125 685 202 688Q272 695 286 695Q304 695 304 684Q304 682 295 644T282 597Q282 592 360 592H399Q430 592 445 587T460 563Q460 552 451 541L442 535H266L251 468Q247 453 243 436T236 409T233 399Q233 395 244 404Q295 441 357 441Q405 441 445 417T485 333Q485 284 449 178T412 58T426 44Q447 44 466 68Q485 87 500 130L509 152H531H543Q562 152 562 144Q562 128 546 93T494 23T415 -13Q385 -13 359 3T322 44Q318 52 318 77Q318 99 352 196T386 337Q386 386 346 386Q318 386 286 370Q267 361 245 338T211 292Q207 287 193 235T162 113T138 21Q128 7 122 4Q105 -12 83 -12Q66 -12 54 -2T42 26L166 530Q166 534 161 534T129 535Q127 535 122 535T112 534Q74 534 74 562Q74 570 77 576T84 585T96 589T109 591T124 592T138 592L182 595V599Z"></path><path id="MJX-120-TEX-I-1D715" d="M202 508Q179 508 169 520T158 547Q158 557 164 577T185 624T230 675T301 710L333 715H345Q378 715 384 714Q447 703 489 661T549 568T566 457Q566 362 519 240T402 53Q321 -22 223 -22Q123 -22 73 56Q42 102 42 148V159Q42 276 129 370T322 465Q383 465 414 434T455 367L458 378Q478 461 478 515Q478 603 437 639T344 676Q266 676 223 612Q264 606 264 572Q264 547 246 528T202 508ZM430 306Q430 372 401 400T333 428Q270 428 222 382Q197 354 183 323T150 221Q132 149 132 116Q132 21 232 21Q244 21 250 22Q327 35 374 112Q389 137 409 196T430 306Z"></path><path id="MJX-120-TEX-I-1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path><path id="MJX-120-TEX-N-200B" d=""></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mover"><g data-mml-node="mi"><use data-c="1D43B" xlink:href="#MJX-120-TEX-I-1D43B"></use></g><g data-mml-node="mo" transform="translate(513.8,257) translate(-250 0)"><use data-c="5E" xlink:href="#MJX-120-TEX-N-5E"></use></g></g></g><g data-mml-node="mi" transform="translate(888,0)"><use data-c="3A8" xlink:href="#MJX-120-TEX-N-3A8"></use></g><g data-mml-node="mo" transform="translate(1943.8,0)"><use data-c="3D" xlink:href="#MJX-120-TEX-N-3D"></use></g><g data-mml-node="mi" transform="translate(2999.6,0)"><use data-c="1D456" xlink:href="#MJX-120-TEX-I-1D456"></use></g><g data-mml-node="mi" transform="translate(3344.6,0)"><use data-c="210F" xlink:href="#MJX-120-TEX-V-210F"></use></g><g data-mml-node="mfrac" transform="translate(3906.6,0)"><g data-mml-node="mi" transform="translate(400.5,676)"><use data-c="1D715" xlink:href="#MJX-120-TEX-I-1D715"></use></g><g data-mml-node="mrow" transform="translate(220,-686)"><g data-mml-node="mi"><use data-c="1D715" xlink:href="#MJX-120-TEX-I-1D715"></use></g><g data-mml-node="mi" transform="translate(566,0)"><use data-c="1D461" xlink:href="#MJX-120-TEX-I-1D461"></use></g></g><rect width="1127" height="60" x="120" y="220"></rect></g><g data-mml-node="mi" transform="translate(5273.6,0)"><use data-c="3A8" xlink:href="#MJX-120-TEX-N-3A8"></use></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(6051.6,0)"><g data-mml-node="mo"><use data-c="200B" xlink:href="#MJX-120-TEX-N-200B"></use></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow data-mjx-texclass="ORD"><mover><mi>H</mi><mo stretchy="false">^</mo></mover></mrow><mi mathvariant="normal">Ψ</mi><mo>=</mo><mi>i</mi><mi data-mjx-alternate="1">ℏ</mi><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mi mathvariant="normal">Ψ</mi><mrow data-mjx-texclass="ORD"><mo>​</mo></mrow></math></mjx-assistive-mml></mjx-container></div></div><p><span>，也可以很方便建立矩阵等；其次可以使用 </span><code>\ref{}</code><span> 和 </span><code>\label{}</code><span> 的标签做到很便捷的引用功能；文章的各个部分也可以分别在不同文件中写完，最后再使用主文章包含进去；参考文献也有专门的管理文件系统。另外对于化学类学生，LaTeX 同时支持简单的化学式表达和有机物绘制，如 </span><code>\ce{CH3COOH}</code><span> 即为 </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="11.114ex" height="1.97ex" role="img" focusable="false" viewBox="0 -705 4912.6 870.6" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.375ex;"><defs><path id="MJX-24-TEX-N-43" d="M56 342Q56 428 89 500T174 615T283 681T391 705Q394 705 400 705T408 704Q499 704 569 636L582 624L612 663Q639 700 643 704Q644 704 647 704T653 705H657Q660 705 666 699V419L660 413H626Q620 419 619 430Q610 512 571 572T476 651Q457 658 426 658Q322 658 252 588Q173 509 173 342Q173 221 211 151Q232 111 263 84T328 45T384 29T428 24Q517 24 571 93T626 244Q626 251 632 257H660L666 251V236Q661 133 590 56T403 -21Q262 -21 159 83T56 342Z"></path><path id="MJX-24-TEX-N-48" d="M128 622Q121 629 117 631T101 634T58 637H25V683H36Q57 680 180 680Q315 680 324 683H335V637H302Q262 636 251 634T233 622L232 500V378H517V622Q510 629 506 631T490 634T447 637H414V683H425Q446 680 569 680Q704 680 713 683H724V637H691Q651 636 640 634T622 622V61Q628 51 639 49T691 46H724V0H713Q692 3 569 3Q434 3 425 0H414V46H447Q489 47 498 49T517 61V332H232V197L233 61Q239 51 250 49T302 46H335V0H324Q303 3 180 3Q45 3 36 0H25V46H58Q100 47 109 49T128 61V622Z"></path><path id="MJX-24-TEX-N-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path><path id="MJX-24-TEX-N-4F" d="M56 340Q56 423 86 494T164 610T270 680T388 705Q521 705 621 601T722 341Q722 260 693 191T617 75T510 4T388 -22T267 3T160 74T85 189T56 340ZM467 647Q426 665 388 665Q360 665 331 654T269 620T213 549T179 439Q174 411 174 354Q174 144 277 61Q327 20 385 20H389H391Q474 20 537 99Q603 188 603 354Q603 411 598 439Q577 592 467 647Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><use data-c="43" xlink:href="#MJX-24-TEX-N-43"></use><use data-c="48" xlink:href="#MJX-24-TEX-N-48" transform="translate(722,0)"></use></g></g><g data-mml-node="msub" transform="translate(1472,0)"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mpadded"><g data-mml-node="mphantom"></g></g></g></g><g data-mml-node="TeXAtom" transform="translate(9,-150) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mpadded"><g data-mml-node="mn"><use data-c="33" xlink:href="#MJX-24-TEX-N-33"></use></g></g></g></g></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(1884.6,0)"><g data-mml-node="mi"><use data-c="43" xlink:href="#MJX-24-TEX-N-43"></use><use data-c="4F" xlink:href="#MJX-24-TEX-N-4F" transform="translate(722,0)"></use><use data-c="4F" xlink:href="#MJX-24-TEX-N-4F" transform="translate(1500,0)"></use><use data-c="48" xlink:href="#MJX-24-TEX-N-48" transform="translate(2278,0)"></use></g></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow data-mjx-texclass="ORD"><mrow data-mjx-texclass="ORD"><mi data-mjx-auto-op="false">CH</mi></mrow><msub><mrow data-mjx-texclass="ORD"><mrow data-mjx-texclass="ORD"><mpadded width="0"><mphantom><mi>X</mi></mphantom></mpadded></mrow></mrow><mrow data-mjx-texclass="ORD"><mrow data-mjx-texclass="ORD"><mpadded height="0"><mn>3</mn></mpadded></mrow></mrow></msub><mrow data-mjx-texclass="ORD"><mi data-mjx-auto-op="false">COOH</mi></mrow></mrow></math></mjx-assistive-mml></mjx-container><script type="math/tex">\ce{CH3COOH}</script><span>（需要使用 </span><code>mhchem</code><span> 宏包）​​​。</span></p><p><span>但说句实话，LaTeX 属于易学难精，日积月累才能灵活运用。即使 LaTeX 不是最方便的工具，它却是最符合科技文章规范的，而且在引用和公式这两点上 Word 反正是望尘莫及。我用 LaTeX 写各种报告和作业已经 3 年有余，现在也尝试使用 LaTeX 制作简历、幻灯片等材料，观感上还是很不错的。</span></p><h3 id='推荐软件-2'><span>推荐软件</span></h3><ol start='' ><li><p><strong><span>WinEdt</span></strong></p><p><img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_WinEdt.png" referrerpolicy="no-referrer" alt="WinEdt Logo"></p><blockquote><p><strong><span>推荐指数：7/10</span></strong><span> （非 CTEX 版本：4/10）</span></p></blockquote><p><span>如果对中文有需求推荐直接使用（基于 WinEdt 编辑器的）CTeX，对中文有较好支持。</span></p><ul><li><span>优点：功能完善，基本上作为 LaTeX 编辑器需要的功能他都有提供，支持大量 TeX 系列程序，支持拼写检查，有希腊字母和数学符号等的 GUI 菜单，很适合新人入门，支持多标签页，支持；</span></li><li><span>缺点：也太难用了吧，简直是〇〇，且不提本身是非免费不开源的商业软件，每次写完都得手动点编译（如果是使用非原生字体还需要调用 XeLaTeX 程序，不能够使用快捷键），本身不整合 PDF 预览器（通常是要外部调用 SumatraPDF），只支持 Windows，还好像没中文……；</span></li><li><span>适合人群：从入门到入土。</span></li></ul></li><li><p><strong><span>Overleaf</span></strong></p><p><img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_Overleaf.png" alt="Overleaf Logo" style="zoom:40%;" /></p><blockquote><p><strong><span>推荐指数：7/10</span></strong></p></blockquote><p><span>我可不信你在谷歌搜 LaTeX 会没见过这玩意……</span></p><ul><li><span>优点：多人合作（别问我体验如何，笑死我周围根本没人用 LaTeX），在线编辑，支持自动保存，相对美观的 UI，有大量模板可以使用，便捷的项目管理，支持代码自动补完，支持非严谨语法（比如不在数学环境中调用部分数学公式）；</span></li><li><span>缺点：非严谨语法但很可能不能被其他软件识别，也不适合新手入门学习语法，没有常用字符菜单；</span></li><li><span>适合人群：过了萌新期，以及需要合作编辑的人。</span></li></ul></li><li><p><strong><span>Visual Studio Code</span></strong></p><p><img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_VSC.png" alt="VSCode Logo" style="zoom:32%;" /></p><blockquote><p><strong><span>推荐指数：4/10</span></strong></p></blockquote><ul><li><span>优点：VSCode 有什么优点就有什么优点（搁这搁这呢），开源；</span></li><li><span>缺点：无内置预览器等，需要手动配置环境和 SumatraPDF 之类的预览器，对新手来说不友好；</span></li><li><span>适合人群：已经熟悉掌握了 LaTeX 语法和有一定手动配置环境等基础的人。</span></li></ul></li></ol><h3 id='联动软件推荐-2'><span>联动软件推荐</span></h3><ol start='' ><li><p><strong><span>Mathpix Snipping Tool</span></strong></p><p><span>遇到了 PDF 或者图像里（甚至是手写）的公式没办法复制自己打又太麻烦？那就应该试试这个神器了。Mathpix Snipping Tool 提供了对数学公式优化得最好的 OCR，只需要截图（或者用手机端拍照）就可以显示出来正确的 LaTeX 公式，识别率不低但是毕竟 OCR 还是做不到 100%，反正可以极大方便新手和懒人（我），而且最好的是还支持 Word 的公式格式，即使不是 LaTeX 党也可以轻松使用。</span></p></li><li><p><strong><span>gnuplot</span></strong></p><p><span>不是，不会这年头还有人用 gnuplot 吧，不会吧不会吧（x</span></p><p><span>gnuplot 是一个 Linux 平台的命令行交互式绘图工具（当然也可以在 Windows 上使用，是基于 Cygwin 虚拟机的移植），虽然很难用但是碍于能和 LaTeX 联动使用就不骂他了，而且可以使用线性插值平滑图像（你 MATLAB 做得到吗？.jpg）。使用 gnuplot 作图结束之后可以使用 </span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="Bash"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">set</span> terminal epslatex </span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">set</span> output <span class="cm-string">'[Filename].tex'</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">plot <span class="cm-string">"[DataFile].dat"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">set</span> output</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 96px;"></div><div class="CodeMirror-gutters" style="display: none; height: 96px;"></div></div></div></pre><p><span>命令来实现导出供 LaTeX 导出的 </span><code>.tex</code><span> 文件和相同文件名的 </span><code>.eps</code><span> 文件。在 LaTeX 中使用 </span><code>\input{[Filename].tex}</code><span> 即可将矢量图像导入到文档中（推荐加上 </span><code>\begin{figure} ... \end{figure}</code><span> 的指令，以插入图形的形式更好地规定一些其他参数）。</span></p></li><li><p><strong><span>Excel</span></strong></p><p><span>即使是使用了很长时间的人也经常会有 LaTeX 做表格很不方便的感觉，那能不能把 Excel 表格导入到 LaTeX 呢，这里就需要用到一个插件：</span><strong><span>Excel2LaTeX</span></strong></p><p><span>安装完成之后，需要手动在 </span><code>File - Options - Add-ins - Manage</code><span> 中手动启用，此后就会显示在最上方工具栏的 </span><code>Add-ins</code><span>，在 Excel 中选择合适的表格区域再打开这个插件 </span><code>Convert table to LaTeX</code><span> 按钮就可以调整各种参数和导出所需的 LaTeX 版本的表格了，对应的表格线也会被一并加入。注意可能会需要用到一些其他的宏包以避免报错。</span></p><p>&nbsp;</p></li></ol></div></div>
 
 <script>(function(){var e=document.body.parentElement,t=[],n=null,i=document.body.classList.contains("typora-export-collapse-outline"),r=function(e,t,n){document.addEventListener(e,function(e){if(!e.defaultPrevented)for(var i=e.target;i&&i!=this;i=i.parentNode)if(i.matches(t)){!1===n.call(i,e)&&(e.preventDefault(),e.stopPropagation());break}},!1)};function o(){return e.scrollTop}r("click",".outline-expander",function(e){var t=this.closest(".outline-item-wrapper").classList;return t.contains("outline-item-open")?t.remove("outline-item-open"):t.add("outline-item-open"),d(),!1}),r("click",".outline-item",function(e){var t=this.querySelector(".outline-label");if(location.hash="#"+t.getAttribute("href"),i){var n=this.closest(".outline-item-wrapper").classList;n.contains("outline-item-open")||n.add("outline-item-open"),c(),n.add("outline-item-active")}});var a,s,l=function(){var e=o();n=null;for(var i=0;i<t.length&&t[i][1]-e<60;i++)n=t[i]},c=function(){document.querySelectorAll(".outline-item-active").forEach(e=>e.classList.remove("outline-item-active")),document.querySelectorAll(".outline-item-single.outline-item-open").forEach(e=>e.classList.remove("outline-item-open"))},d=function(){if(n){c();var e=document.querySelector('.outline-label[href="#'+(CSS.escape?CSS.escape(n[0]):n[0])+'"]');if(e)if(i){var t=e.closest(".outline-item-open>ul>.outline-item-wrapper");if(t)t.classList.add("outline-item-active");else{for(var r=(e=e.closest(".outline-item-wrapper")).parentElement.closest(".outline-item-wrapper");r;)r=(e=r).parentElement.closest(".outline-item-wrapper");e.classList.add("outline-item-active")}}else e.closest(".outline-item-wrapper").classList.add("outline-item-active")}};window.addEventListener("scroll",function(e){a&&clearTimeout(a),a=setTimeout(function(){l(),d()},300)});var u=function(){s=setTimeout(function(){!function(){t=[];var e=o();document.querySelector("#write").querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(n=>{var i=n.getAttribute("id");t.push([i,e+n.getBoundingClientRect().y])})}(),l(),d()},300)};window.addEventListener("resize",function(e){s&&clearTimeout(s),u()}),u()})();</script></body>
 </html>

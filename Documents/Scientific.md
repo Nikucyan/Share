@@ -2,7 +2,7 @@
 
 平常在学习工作或者科研实验的时候，经常会遇到软件不知道怎么选的问题，尤其是当有标准化的需求，比如文字排版、图表制作等，或者想要降低试错成本。本文将非常主观地结合一些个人使用经验帮助可能有需要的同学找到合适的软件和工具。
 
-
+---
 
 ## Markdown
 
@@ -10,10 +10,11 @@
 	<center>
 	<img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_MD.png"
     	alt="Markdown" 
-    	style="zoom:33%;" />
+    	style="zoom:28%;" />
     </br>
     Markdown Logo
 </div>
+
 ### 简介
 
 很多人想到起草文稿或者记笔记肯定会先想到 Microsoft Office 系列的 Word、One Note、记事本等，但是 Word 实际是属于相对正式的排版软件而非码字软件，会让人觉得有些不顺手也很正常（各种很血压的情况大家也应该遇到不少）；而用系统自带的记事本或写字板，功能不齐全，插图打代码什么的也不方便；Notability 好用是真好用，但也不是所有人都能有 iPad（也不是所有人能能喜欢在 iPad 上手写），如果是纯 PC 党或者需要带代码高亮等情况就很不适合。
@@ -26,32 +27,43 @@ MarkDown 属于轻量级的标记语言，通过纯文本格式编写并生成�
 
 1. **Typora**（本文档都是用 Typora 进行编写）
 
-   <!--![Typora](https://cdn.jsdelivr.net/gh/Nikucyan/Share/main/Images/1_MD.png)-->
+   ![Typora](https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_Typora.png)
+
+   >  **推荐指数：10/10**
 
    Typora 是目前少数可实时像 Word 一样预览内容的 Markdown 的编辑器（实际上是网页浏览器，可以使用 `shift + F12` 调出控制台）
-
+   
    - 优点：无需登录，支持多平台，界面很简洁美观，所见即所得，支持自定义主题（有 GitHub 主题页面），可以直接看大纲目录，也支持很多 Word 系快捷键，支持绝大部分 HTML / CSS 标签，支持自动保存，支持 LaTeX​ 公式和公式块，支持本地图片复制粘贴，如果配合 PicGo + GitHub 之类作为图床还可以实现图片自动上传并添加 URL 链接甚至是 CDN 加速访问，支持智能标点，支持 PDF、LaTeX、Word、网页等多种格式导出；
    - 缺点：不是传统 Markdown 编辑器，如果喜欢传统的分屏用代码控制 + 实时预览的话会不太合适，非开源，可能有少量 bug（比如在写这篇文章的时候自动保存失效了一次，怨念）；
    - 适合人群：频繁使用电脑做笔记、写草稿等需要快速记录的工作而且可能需要打公式和代码块的人。
-
-<div>
-	<center>
-	<img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_Typora_Screen.png"
-    	alt="Typora Screenshot" 
-    	style="zoom:60%;" />
-    </br>
-    Typora 的用户界面
-</div>
-
-
+   
+   <div>
+   	<center>
+   	<img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_Typora_Screen.png"
+       	alt="Typora Screenshot" 
+       	style="zoom:60%;" />
+       </br>
+       Typora 的用户界面
+   </div>
 
 2. **作业部落 Cmd Markdown**
 
    ![CMD Logo](https://www.zybuluo.com/static/img/logo.png)
 
+   > **推荐指数：8/10**
+
    - 优点：有网页版，甚至可以不下载在线使用，支持多平台，支持自动云端保存（需登录），支持把自己的文稿发布于作业部落官方提供的平台，支持 LaTeX 公式和公式块，支持高效绘制流程图（用代码），有可视化操作按钮；
    - 缺点：大部分功能需要注册登录，一些功能（如上传图片、导出完整 PDF 和网页等）还需要会员，对生态锁得比较死，编辑器偶尔会出现显示错误的 bug，非开源；
    - 适合人群：同上，同时有便捷分享和作图床使用的需求。
+
+   <div>
+   	<center>
+   	<img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_CMD_Screen.png"
+       	alt="CMD Screenshot" 
+       	style="zoom:60%;" />
+       </br>
+       作业部落 CMD Markdown 的用户界面
+   </div>
 
 ### 联动软件推荐
 
@@ -67,7 +79,18 @@ MarkDown 属于轻量级的标记语言，通过纯文本格式编写并生成�
 
 上面说到 Word 属于排版工具，那科研排版能用 Word ……吗？
 
-答案也是不行的（Word 就是废物啊）。Word 在公式编辑方面极不规范，极易导致公式在复制粘贴或者格式转换后就不能用了，加上还有行间使用的表示数学符号的如 $\phi$​​​ 之类都会出现错误显示的情况（变成 UTF-8 / Unicode 字符），还有规范引用文献的问题，即使现在一些教授可以接收 Word 编辑的实验报告和作业，以后需要正式地发表到一些出版平台（尤其是国外期刊的出版商，比如 Elsevier、IEEE、Springer、Wiley 等）大多需要使用规定的 **LaTeX** 模板进行排版，而且很可能完全不接受 Word 文档。这个时候学习使用 LaTeX 就很有必要。
+> Word：你再骂？
+
+答案也是不行的（Word 就是废物啊）。Word 在公式编辑方面极不规范，极易导致公式在复制粘贴或者格式转换后就无法使用，加上还有行间使用的表示数学符号的如 $\phi$​​​​ 之类都会出现错误显示的情况（变成 UTF-8 / Unicode 字符），还有规范引用文献的问题，即使现在一些教授可以接收 Word 编辑的实验报告和作业，以后需要正式地发表到一些出版平台（尤其是国外期刊的出版商，比如 Elsevier、IEEE、Springer、Wiley 等）大多需要使用规定的 **LaTeX** 模板进行排版，而且很可能完全不接受 Word 文档。这个时候学习使用 LaTeX 就很有必要。
+
+<div>
+	<center>
+	<img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_LaTeX.svg"
+    	alt="LaTeX" 
+    	style="zoom:70%;" />
+    </br>
+    The LaTeX Project
+</div>
 
 LaTeX 是一种文字编辑的标准，是 TeX 标准上的扩展。编辑需要全程使用代码（有少数所见即所得式编辑器，但是我没试过就不推荐了）。通常 LaTeX 需要先声明使用的文章类别（`\documentclass{}`）和宏包（`\usepackage{}`），类似于在 C 语言中声明运行库（`#include<stdio>`）和定义函数（`#define [some function]`）的作用。其最大特点在于在文章中通过 `$ ... $` 或 `$$ ... $$` 在行中 / 行间表示数学环境（更正式可以使用 `\begin{equation} ... \end{equation}` 表示），如广义薛定谔方程：`$$\hat{H} \Psi = i \hbar \frac{\partial}{\partial t} \Psi$$` 即为 
 $$
@@ -81,6 +104,10 @@ $$
 
 1. **WinEdt**
 
+   ![WinEdt Logo](https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_WinEdt.png)
+
+   > **推荐指数：7/10** （非 CTEX 版本：4/10）
+
    如果对中文有需求推荐直接使用（基于 WinEdt 编辑器的）CTeX，对中文有较好支持。
 
    - 优点：功能完善，基本上作为 LaTeX 编辑器需要的功能他都有提供，支持大量 TeX 系列程序，支持拼写检查，有希腊字母和数学符号等的 GUI 菜单，很适合新人入门，支持多标签页，支持；
@@ -89,6 +116,10 @@ $$
 
 2. **Overleaf**
 
+   <img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_Overleaf.png" alt="Overleaf Logo" style="zoom:40%;" />
+
+   > **推荐指数：7/10**
+
    我可不信你在谷歌搜 LaTeX 会没见过这玩意……
 
    - 优点：多人合作（别问我体验如何，笑死我周围根本没人用 LaTeX），在线编辑，支持自动保存，相对美观的 UI，有大量模板可以使用，便捷的项目管理，支持代码自动补完，支持非严谨语法（比如不在数学环境中调用部分数学公式）；
@@ -96,6 +127,10 @@ $$
    - 适合人群：过了萌新期，以及需要合作编辑的人。
 
 3. **Visual Studio Code**
+
+   <img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_VSC.png" alt="VSCode Logo" style="zoom:32%;" />
+
+   > **推荐指数：4/10**
 
    - 优点：VSCode 有什么优点就有什么优点（搁这搁这呢），开源；
    - 缺点：无内置预览器等，需要手动配置环境和 SumatraPDF 之类的预览器，对新手来说不友好；
