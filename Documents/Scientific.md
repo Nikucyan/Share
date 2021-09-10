@@ -6,7 +6,7 @@
 
 ## Markdown
 
-![](https://d33wubrfki0l68.cloudfront.net/f1f475a6fda1c2c4be4cac04033db5c3293032b4/513a4/assets/images/markdown-mark-white.svg)
+<img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_MD.png" alt="Markdown" style="zoom:33%;" />
 
 ### 简介
 
@@ -20,13 +20,17 @@ MarkDown 属于轻量级的标记语言，通过纯文本格式编写并生成�
 
 1. **Typora**（本文档都是用 Typora 进行编写）
 
-   
+   <!--![Typora](https://cdn.jsdelivr.net/gh/Nikucyan/Share/main/Images/1_MD.png)-->
 
    Typora 是目前少数可实时像 Word 一样预览内容的 Markdown 的编辑器
 
    - 优点：无需登录，支持多平台，界面很简洁美观，所见即所得，支持自定义主题（有 GitHub 主题页面），可以直接看大纲目录，也支持很多 Word 系快捷键，支持使用比原生 Markdown 更丰富的 HTML 标签，支持自动保存，支持 LaTeX​ 公式和公式块，支持本地图片复制粘贴，如果配合 PicGo + GitHub 之类作为图床还可以实现图片自动上传并添加 URL 链接甚至是 CDN 加速访问，支持智能标点，支持 PDF、LaTeX、Word、网页等多种格式导出；
    - 缺点：不是传统 Markdown 编辑器，如果喜欢传统的分屏用代码控制 + 实时预览的话会不太合适，非开源，可能有少量 bug（比如在写这篇文章的时候自动保存失效了一次，怨念）；
    - 适合人群：频繁使用电脑做笔记、写草稿等需要快速记录的工作而且可能需要打公式和代码块的人。
+
+![Typora](https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_Typora_Screen.png)
+
+
 
 2. **作业部落 Cmd Markdown**
 
