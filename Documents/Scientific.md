@@ -1,21 +1,16 @@
 # 软件推荐 1 - 学术科研类
 
-平常在学习工作或者科研实验的时候，经常会遇到软件不知道怎么选的问题，尤其是当有标准化的需求，比如文字排版、图表制作等，或者想要降低试错成本。本文将非常主观地结合一些个人使用经验帮助可能有需要的同学找到合适的软件和工具。
+平常在学习工作或者科研实验的时候，经常会遇到软件不知道怎么选的问题，尤其是当有**标准化**的需求，比如文字排版、图表制作等，或者想要**降低试错成本**。本文将**非常主观**地结合一些个人使用经验帮助可能有需要的人找到合适的软件和工具。
+
+这次分享就从个人觉得最有说头的文本处理工具  **Markdown** 和 **LaTeX** 说起吧。（可别每次都只想到只会拉跨的 Word 了）
+
+![Cover1](https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/Cover_1.png)
 
 ---
 
 ## Markdown
 
-<div>
-	<center>
-	<img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_MD_s.png"
-    	alt="Markdown" 
-    	style="zoom:60%;" />
-    </br>
-    Markdown Logo
-</div>
-
-
+![Cover1](https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/S_1_MD_s.png)
 
 ### 简介
 
@@ -29,7 +24,7 @@ MarkDown 属于轻量级的标记语言，通过纯文本格式编写并生成�
 
 1. **Typora**（本文档即是用 Typora 进行编写）
 
-   ![Typora](https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_Typora.png)
+   ![Typora](https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/S_1_Typora.png)
 
    >  **推荐指数：10/10**
 
@@ -39,18 +34,15 @@ MarkDown 属于轻量级的标记语言，通过纯文本格式编写并生成�
    - 缺点：不是传统 Markdown 编辑器，如果喜欢传统的分屏用代码控制 + 实时预览的话会不太合适，非开源，可能有少量 bug（比如在写这篇文章的时候自动保存失效了一次，怨念）；
    - 适合人群：频繁使用电脑做笔记、写草稿等需要快速记录的工作而且可能需要打公式和代码块的人。
    
-   <div>
-   	<center>
-   	<img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_Typora_Screen2.png"
+   <img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_Typora_Screen2.png"
        	alt="Typora Screenshot" 
-       	style="zoom:60%;" />
-       </br>
-       Typora 的用户界面
-   </div>
-
+       	style="zoom:100%;" />
+   
+   
+   
 2. **作业部落 Cmd Markdown**
 
-   ![CMD Logo](https://www.zybuluo.com/static/img/logo.png)
+   ![CMD Logo](https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/S_1_CMD.png)
 
    > **推荐指数：8/10**
 
@@ -58,20 +50,17 @@ MarkDown 属于轻量级的标记语言，通过纯文本格式编写并生成�
    - 缺点：大部分功能需要注册登录，一些功能（如上传图片、导出完整 PDF 和网页等）还需要会员，对生态锁得比较死，编辑器偶尔会出现显示错误的 bug，非开源；
    - 适合人群：同上，同时有便捷分享和作图床使用的需求。
 
-   <div>
-   	<center>
-   	<img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_CMD_Screen2.png"
-       	alt="CMD Screenshot" 
-       	style="zoom:60%;" />
-       </br>
-       作业部落 CMD Markdown 的用户界面
-   </div>
+   <img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_CMD_Screen2.png"
+   	alt="CMD Screenshot" 
+   	style="zoom:60%;" />
 
 ### 联动软件推荐
 
 1. **PicGo**
 
    上面已经提到了，需要在类似 GitHub 一类提供文件 / 代码托管服务的平台上建立仓库，PicGo 会使用 Token 的形式得到上传许可并提交更新到远程仓库。只需要简单的配置也可以实现使用第三方 CDN 加速（比如我使用的是免费开源的公共 CDN：**jsDelivr**，相对应的图片网址就改为 `https://cdn.jsdelivr.net/gh/[directory_in_GH_Repo]`），这样在 Typora 中开启 PicGo 的联动功能就可以把复制进去的图片一口气上传到自己的对应仓库并更改引用链接为经过加速的链接。
+   
+   ![PicGo](https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_PicGo.png)
 
 
 
@@ -106,41 +95,47 @@ $$
 
 1. **WinEdt**
 
-   ![WinEdt Logo](https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_WinEdt.png)
+   ![WinEdt Logo](https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/S_1_WinEdt.png)
 
    > **推荐指数：7/10** （非 CTEX 版本：4/10）
 
    如果对中文有需求推荐直接使用（基于 WinEdt 编辑器的）**CTeX**，对中文有较好支持。
 
-   - 优点：功能完善，基本上作为 LaTeX 编辑器需要的功能他都有提供，支持大量 TeX 系列程序，支持拼写检查，有希腊字母和数学符号等的 GUI 菜单，很适合新人入门，支持多标签页，支持；
+   - 优点：功能完善，基本上作为 LaTeX 编辑器需要的功能他都有提供，支持大量 TeX 系列程序，支持拼写检查，有希腊字母和数学符号等的 GUI 菜单，很适合新人入门，支持多标签页；
    - 缺点：也太难用了吧，简直是〇〇，且不提本身是非免费不开源的商业软件，每次写完都得手动点编译（如果是使用非原生字体还需要调用 XeLaTeX 程序，不能够使用快捷键），本身不整合 PDF 预览器（通常是要外部调用 SumatraPDF），只支持 Windows，还好像没中文 UI ……；
    - 适合人群：从入门到入土。
 
    ![WinEdt 用户界面（左为搭配使用的 SumatraPDF）](https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_WinEdt_Screen.png)
 
-2. **Overleaf**
+2. **Visual Studio Code**
 
-   <img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_Overleaf.png" alt="Overleaf Logo" style="zoom:40%;" />
+   ![VSCode](https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/S_1_VSC.png)
+
+   > **推荐指数：8/10**
+
+   - 优点：VSCode 有什么优点就有什么优点（搁这搁这呢），简洁大气的 UI，开源，有很完善的社区环境，可以下载到大多数需要的组件，有希腊字母和数学符号等的 GUI 菜单，支持代码补齐，有比较完善的文件管理系统和 Bib 管理系统，极快的响应和编译速度，支持多标签页和内置外置预览器，支持中文语言包，但中文偶尔可能会有 bug；
+   - 缺点：可能需要手动配置环境和预览器（我自己已经装过了所以不是很清楚，但是如果装了 `LaTeX Workshop` 似乎就没有这个问题了）；
+   - 适合人群：从入门到入土，最好有一点编程和配置的基础。
+   
+   
+   ![VSCode 用户界面](https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_VSC_Screen.png)
+
+
+3. **Overleaf**
+
+   ![Overleaf](https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/S_1_Overleaf.png)
 
    > **推荐指数：6/10**
 
    我可不信你在谷歌搜 LaTeX 会没见过这玩意……
 
    - 优点：多人合作（别问我体验如何，笑死周围根本没人用 LaTeX），在线编辑，支持自动保存，相对美观的 UI，有大量模板可以使用，便捷的项目管理，支持代码自动补完，支持非严格语法（比如不在数学环境中调用部分数学公式），对每个错误都有比较详细的解释；
-   - 缺点：都是 LaTeX 了这个拼写检测做得这么拉跨有什么必要加上去吗，非严格语法但很可能不能被其他软件识别，没有常用字符菜单，对使用如 XeLaTeX 等非原生编译器的宏包支持不够好，加上没有中文的支持，不推荐任何需要用中文写论文的人使用；
+   - 缺点：都是 LaTeX 了这个拼写检测做得这么拉跨有什么必要加上去吗，非严格语法又很可能不能被其他软件识别，没有常用字符菜单，对使用如 XeLaTeX 等非原生编译器的宏包支持不够好，加上没有中文的支持，不推荐任何需要用中文写论文的人使用；
    - 适合人群：从入门到入土，尤其是需要合作编辑的人。
+     
+   
+   ![Overleaf 用户界面](https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_Overleaf_Screen.png)
 
-   ![Overleaf 用户界面（左为搭配使用的 SumatraPDF）](https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_Overleaf_Screen.png)
-
-3. **Visual Studio Code**
-
-   <img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/1_VSC.png" alt="VSCode Logo" style="zoom:32%;" />
-
-   > **推荐指数：4/10**
-
-   - 优点：VSCode 有什么优点就有什么优点（搁这搁这呢），开源；
-   - 缺点：无内置预览器等，需要手动配置环境和 SumatraPDF 之类的预览器，对新手来说不友好，同样对中文的支持较差，不推荐任何需要用中文写论文的人使用；
-   - 适合人群：已经熟悉掌握了 LaTeX 语法和有一定手动配置环境等基础的人。
 
 ### 联动软件推荐
 
@@ -154,7 +149,7 @@ $$
 
    > 不是，不会这年头还有人用 gnuplot 吧，不会吧不会吧（x
 
-   gnuplot 是一个 Linux 平台的命令行交互式绘图工具（当然也可以在 Windows 上使用，是基于 Cygwin 虚拟机的移植），虽然很难用但是碍于能和 LaTeX 联动使用就不骂他了，而且可以使用线性插值平滑图像（你 MATLAB 做得到吗？.jpg）。使用 gnuplot 作图结束之后可以使用 
+   gnuplot 是一个 Linux 平台的命令行交互式绘图工具（当然也可以在 Windows 上使用，是基于 Cygwin  虚拟机的移植），虽然很难用但是碍于能和 LaTeX 联动使用就不骂他了，而且可以使用线性插值平滑并输出矢量图像。你们 MATLAB  做得到吗？.jpg（好啦 MATLAB 也可以导出矢量 eps 文件但是没有和 LaTeX 联动的针对性就暂且不提了）。
 
    ``` Bash
    set terminal epslatex 
@@ -163,7 +158,7 @@ $$
    set output
    ```
 
-   命令来实现导出供 LaTeX 导出的 `.tex` 文件和相同文件名的 `.eps` 文件。在 LaTeX 中使用 `\input{[Filename].tex}` 即可将矢量图像导入到文档中（推荐加上 `\begin{figure} ... \end{figure}` 的指令，以插入图形的形式更好地规定一些其他参数）。
+   命令来实现导出供 LaTeX 导出的 `.tex` 文件和相同文件名的 `.eps` 文件。在 LaTeX 中使用 `\input{[Filename].tex}` 即可将矢量图像导入到文档中（推荐加上 `\begin{figure} ... \end{figure}` 的指令，以插入图形的形式更好地规定一些其他参数），这样就能得到比较标准的 PDF 内嵌矢量插图了。
    
 3. **Excel**
 
