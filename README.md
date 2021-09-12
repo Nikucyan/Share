@@ -11,6 +11,10 @@ Sharing thoughts and experience...
 
 2. Software Recommendation - Scientific Illustration (On the way)
 
+SP-1. Anime Photo Info Searching
+
+</br>
+
 ## If you don't like GitHub ...
 
 All future files will be also updated here: [阿里盘](https://www.aliyundrive.com/s/hsSD2b9JJJS)
