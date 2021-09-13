@@ -1,0 +1,946 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+/* meyer reset -- http://meyerweb.com/eric/tools/css/reset/ , v2.0 | 20110126 | License: none (public domain) */
+
+@include-when-export url(https://fonts.loli.net/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic-ext,cyrillic,latin-ext);
+
+/* =========== */
+
+/* pt-serif-regular - latin */
+/* pt-serif-italic - latin */
+/* pt-serif-700 - latin */
+/* pt-serif-700italic - latin */
+:root {
+	--active-file-bg-color: #dadada;
+	--active-file-bg-color: rgba(32, 43, 51, 0.63);
+	--active-file-text-color: white;
+	--bg-color: #f3f2ee;
+	--text-color: #1f0909;
+	--control-text-color: #444;
+	--rawblock-edit-panel-bd: #e5e5e5;
+
+	--select-text-bg-color: rgba(32, 43, 51, 0.63);
+  --select-text-font-color: white;
+}
+
+pre {
+	--select-text-bg-color: #36284e;
+	--select-text-font-color: #fff;
+}
+
+html {
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+}
+
+html, body {
+	background-color: #f3f2ee;
+	font-family: "PT Serif", 'Times New Roman', Times, serif;
+	color: #1f0909;
+	line-height: 1.5em;
+}
+
+/*#write {
+	overflow-x: auto;
+    max-width: initial;
+	padding-left: calc(50% - 17em);
+    padding-right: calc(50% - 17em);
+}
+
+@media (max-width: 36em) {
+ 	#write {
+ 		padding-left: 1em;
+    	padding-right: 1em;
+ 	}
+}*/
+
+#write {
+	max-width: 40em;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+			max-width: 914px;
+	}
+}
+
+ol li {
+	list-style-type: decimal;
+	list-style-position: outside;
+}
+ul li {
+	list-style-type: disc;
+	list-style-position: outside;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* styles */
+
+/* ====== */
+
+/* headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold;
+}
+h1 {
+	font-size: 1.875em;
+	/*30 / 16*/
+	line-height: 1.6em;
+	/* 48 / 30*/
+	margin-top: 2em;
+}
+h2,
+h3 {
+	font-size: 1.3125em;
+	/*21 / 16*/
+	line-height: 1.15;
+	/*24 / 21*/
+	margin-top: 2.285714em;
+	/*48 / 21*/
+	margin-bottom: 1.15em;
+	/*24 / 21*/
+}
+h3 {
+	font-weight: normal;
+}
+h4 {
+	font-size: 1.125em;
+	/*18 / 16*/
+	margin-top: 2.67em;
+	/*48 / 18*/
+}
+h5,
+h6 {
+	font-size: 1em;
+	/*16*/
+}
+h1 {
+	border-bottom: 1px solid;
+	margin-bottom: 1.875em;
+	padding-bottom: 0.8125em;
+}
+/* links */
+
+a {
+	text-decoration: none;
+	color: #065588;
+}
+a:hover,
+a:active {
+	text-decoration: underline;
+}
+/* block spacing */
+
+p,
+blockquote,
+.md-fences {
+	margin-bottom: 1.5em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 1.5em;
+}
+/* blockquote */
+
+blockquote {
+	font-style: italic;
+	border-left: 5px solid;
+	margin-left: 2em;
+	padding-left: 1em;
+}
+/* lists */
+
+ul,
+ol {
+	margin: 0 0 1.5em 1.5em;
+}
+/* tables */
+.md-meta,.md-before, .md-after {
+	color:#999;
+}
+
+table {
+	margin-bottom: 1.5em;
+	/*24 / 16*/
+	font-size: 1em;
+	/* width: 100%; */
+}
+thead th,
+tfoot th {
+	padding: .25em .25em .25em .4em;
+	text-transform: uppercase;
+}
+th {
+	text-align: left;
+}
+td {
+	vertical-align: top;
+	padding: .25em .25em .25em .4em;
+}
+
+code,
+.md-fences {
+	background-color: #dadada;
+}
+
+code {
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.md-fences {
+	margin-left: 2em;
+	margin-bottom: 3em;
+	padding-left: 1ch;
+	padding-right: 1ch;
+}
+
+pre,
+code,
+tt {
+	font-size: .875em;
+	line-height: 1.714285em;
+}
+/* some fixes */
+
+h1 {
+	line-height: 1.3em;
+	font-weight: normal;
+	margin-bottom: 0.5em;
+}
+
+p + ul,
+p + ol{
+	margin-top: .5em;
+}
+
+h3 + ul,
+h4 + ul,
+h5 + ul,
+h6 + ul,
+h3 + ol,
+h4 + ol,
+h5 + ol,
+h6 + ol {
+	margin-top: .5em;
+}
+
+li > ul,
+li > ol {
+	margin-top: inherit;
+	margin-bottom: 0;
+}
+
+li ol>li {
+	list-style-type: lower-alpha;
+}
+
+li li ol>li{
+	list-style-type: lower-roman;
+}
+
+h2,
+h3 {
+	margin-bottom: .75em;
+}
+hr {
+	border-top: none;
+	border-right: none;
+	border-bottom: 1px solid;
+	border-left: none;
+}
+h1 {
+	border-color: #c5c5c5;
+}
+blockquote {
+	border-color: #bababa;
+	color: #656565;
+}
+
+blockquote ul,
+blockquote ol {
+	margin-left:0;
+}
+
+.ty-table-edit {
+	background-color: transparent;
+}
+thead {
+	background-color: #dadada;
+}
+tr:nth-child(even) {
+	background: #e8e7e7;
+}
+hr {
+	border-color: #c5c5c5;
+}
+.task-list{
+	padding-left: 1rem;
+}
+
+.md-task-list-item {
+	padding-left: 1.5rem;
+	list-style-type: none;
+}
+
+.md-task-list-item > input:before {
+	content: '\221A';
+	display: inline-block;
+	width: 1.25rem;
+  	height: 1.6rem;
+	vertical-align: middle;
+	text-align: center;
+	color: #ddd;
+	background-color: #F3F2EE;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before{
+	color: inherit;
+}
+
+#write pre.md-meta-block {
+	min-height: 1.875rem;
+	color: #555;
+	border: 0px;
+	background: transparent;
+	margin-top: -4px;
+	margin-left: 1em;
+	margin-top: 1em;
+}
+
+.md-image>.md-meta {
+	color: #9B5146;
+}
+
+.md-image>.md-meta{
+	font-family: Menlo, 'Ubuntu Mono', Consolas, 'Courier New', 'Microsoft Yahei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', serif;
+}
+
+
+#write>h3.md-focus:before{
+	left: -1.5rem;
+	color:#999;
+	border-color:#999;
+}
+#write>h4.md-focus:before{
+	left: -1.5rem;
+	top: .25rem;
+	color:#999;
+	border-color:#999;
+}
+#write>h5.md-focus:before{
+	left: -1.5rem;
+	top: .0.3125rem;
+	color:#999;
+	border-color:#999;
+}
+#write>h6.md-focus:before{
+	left: -1.5rem;
+	top: 0.3125rem;
+	color:#999;
+	border-color:#999;
+}
+
+.md-toc:focus .md-toc-content{
+	margin-top: 19px;
+}
+
+.md-toc-content:empty:before{
+	color: #065588;
+}
+.md-toc-item {
+	color: #065588;
+}
+#write div.md-toc-tooltip {
+	background-color: #f3f2ee;
+}
+
+#typora-sidebar {
+	background-color: #f3f2ee;
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.375);
+  	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.375);
+}
+
+.pin-outline #typora-sidebar {
+	background: inherit;
+	box-shadow: none;
+	border-right: 1px dashed;
+}
+
+.pin-outline #typora-sidebar:hover .outline-title-wrapper {
+	border-left:1px dashed;
+}
+
+.outline-item:hover {
+  background-color: #dadada;
+  border-left: 28px solid #dadada;
+  border-right: 18px solid #dadada;
+}
+
+.typora-node .outline-item:hover {
+  	border-right: 28px solid #dadada;
+}
+
+.outline-expander:before {
+  content: "\f0da";
+  font-family: FontAwesome;
+  font-size:14px;
+  top: 1px;
+}
+
+.outline-expander:hover:before,
+.outline-item-open>.outline-item>.outline-expander:before {
+  content: "\f0d7";
+}
+
+.modal-content {
+	background-color: #f3f2ee;
+}
+
+.auto-suggest-container ul li {
+	list-style-type: none;
+}
+
+/** UI for electron */
+
+.megamenu-menu,
+#top-titlebar, #top-titlebar *,
+.megamenu-content {
+	background: #f3f2ee;
+	color: #1f0909;
+}
+
+.megamenu-menu-header {
+	border-bottom: 1px dashed #202B33;
+}
+
+.megamenu-menu {
+	box-shadow: none;
+	border-right: 1px dashed;
+}
+
+header, .context-menu, .megamenu-content, footer {
+	font-family: "PT Serif", 'Times New Roman', Times, serif;
+    color: #1f0909;
+}
+
+#megamenu-back-btn {
+	color: #1f0909;
+	border-color: #1f0909;
+}
+
+.megamenu-menu-header #megamenu-menu-header-title:before {
+	color: #1f0909;
+}
+
+.megamenu-menu-list li a:hover, .megamenu-menu-list li a.active {
+	color: inherit;
+	background-color: #e8e7df;
+}
+
+.long-btn:hover {
+	background-color: #e8e7df;
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: transparent !important;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
+    color: inherit;
+}
+
+.megamenu-menu-panel .btn {
+	background-color: #D2D1D1;
+}
+
+.btn-default {
+	background-color: transparent;
+}
+
+.typora-sourceview-on #toggle-sourceview-btn,
+.ty-show-word-count #footer-word-count {
+	background: #c7c5c5;
+}
+
+#typora-quick-open {
+    background-color: inherit;
+}
+
+.md-diagram-panel {
+	margin-top: 8px;
+}
+
+.file-list-item-file-name {
+	font-weight: initial;
+}
+
+.file-list-item-summary {
+	opacity: 1;
+}
+
+.file-list-item {
+	color: #777;
+}
+
+.file-list-item.active {
+	background-color: inherit;
+	color: black;
+}
+
+.ty-side-sort-btn.active {
+	background-color: inherit;
+}
+
+.file-list-item.active .file-list-item-file-name  {
+	font-weight: bold;
+}
+
+.file-list-item{
+    opacity:1 !important;
+}
+
+.file-library-node.active>.file-node-background{
+	background-color: rgba(32, 43, 51, 0.63);
+	background-color: var(--active-file-bg-color);
+}
+
+.file-tree-node.active>.file-node-content{
+	color: white;
+	color: var(--active-file-text-color);
+}
+
+.md-task-list-item>input {
+	margin-left: -1.7em;
+	margin-top: calc(1rem - 12px);
+}
+
+input {
+	border: 1px solid #aaa;
+}
+
+.megamenu-menu-header #megamenu-menu-header-title,
+.megamenu-menu-header:hover, 
+.megamenu-menu-header:focus {
+	color: inherit;
+}
+
+.dropdown-menu .divider {
+	border-color: #e5e5e5;
+	opacity: 1;
+}
+
+/* https://github.com/typora/typora-issues/issues/2046 */
+.os-windows-7 strong,
+.os-windows-7 strong  {
+	font-weight: 760;
+}
+
+.ty-preferences .btn-default {
+	background: transparent;
+}
+
+.ty-preferences .window-header {
+	border-bottom: 1px dashed #202B33;
+	box-shadow: none;
+}
+
+#sidebar-loading-template, #sidebar-loading-template.file-list-item {
+	color: #777;
+}
+
+.searchpanel-search-option-btn.active {
+	background: #777;
+	color: white;
+}
+
+img{
+    zoom: 65%;
+}
+
+
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > g > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+  stroke-width: 3;
+}
+
+g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+
+.MathJax g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+ :root {--mermaid-font-zoom:1.25em ;} 
+</style><title>Anime_Ill_Search</title>
+</head>
+<body class='typora-export os-windows typora-export-show-outline typora-export-collapse-outline'><div class='typora-export-content'>
+<div class="typora-export-sidebar"><div class="outline-content"><li class="outline-item-wrapper outline-h1 outline-item-open"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#二次元找图工具人养成指南2021-版）">二次元找图工具人养成指南（2021 版）</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#基础内容">基础内容</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#免责声明">免责声明</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#内容查找">内容查找</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#相关缩写">相关缩写</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#相关工具">相关工具</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2 outline-item-open"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#情景展示">情景展示</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1-低分辨率完整图片搜索原图和作者">1. 低分辨率完整图片搜索原图和作者</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2-残缺不全的图寻找原图">2. 残缺不全的图寻找原图</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3-只记得色彩和大概画面">3. 只记得色彩和大概画面</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#4-周边无原画）和视频截图">4. 周边（无原画）和视频截图</a></div><ul class="outline-children"></ul></li></ul></li></ul></li></div></div><div id='write'  class=''><h1 id='二次元找图工具人养成指南2021-版）'><span>二次元找图工具人养成指南（2021 版）</span></h1><p><span>应该有不少人都有遇到几千年前保留下来的糊得一批的二次元美少女，或者早就删掉原档的壁纸，却突然心血来潮想找找高清原图和作者其他作品的情况。看完本文相信已经可以解决此类 90% 问题。</span></p><blockquote><p><span>很简单，人人都可以学得会（</span></p></blockquote><p><img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/SP1_Cover.png" referrerpolicy="no-referrer" alt="Cover"></p><p><span>以前咱也混迹于百度</span><a href='https://tieba.baidu.com/f?kw=初音ミク'><span>初音未来吧</span></a><span>，高峰时期几乎每天都有人求图，似乎所有帮忙找图的工具人生来都是什么图都能记得一清二楚，一问在脑中搜索便知……你觉得可能吗？帮忙出力搜索的人不过是比提问的人多知道几个站子的普通人罢了。所以就想着把我可能七八年前就在贴吧学到的搜图知识加以总结归纳，加上后来一些站子也不再实用，就开了这么一个科普贴。（也非常感谢贴吧的管理大哥们把我的贴子在首页置顶了一年多，让更多人能方便地掌握一些技巧）</span></p><p><span>那……是时候做一个小小的升级了！</span></p><p><img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/SP1_0_meme2.jpg" referrerpolicy="no-referrer" alt="Meme2"></p><p><span>本文主要会以实际情景出发介绍相关思路，主要针对二次元绘图寻找出处和原图或作者，可能并不很适用于表情包梗图和视频截图一类。在根据各种有限的信息找图的过程中，实战经验也是提升自己等级不可或缺的一部分，也希望大家能把学到的技巧分享给更多人。</span></p><p>&nbsp;</p><h2 id='基础内容'><span>基础内容</span></h2><h3 id='免责声明'><span>免责声明</span></h3><p><span>本文使用的图片仅为学习交流之用，本人不是版权持有者，也不作商业使用；本文提供技巧仅供个人收藏使用，如需商用请自行联系版权所有者，如果在使用本文提供技巧下载图片产生法律问题请自行承担。</span></p><h3 id='内容查找'><span>内容查找</span></h3><ul><li><span>很多时候图片的角落可能就含有画师的</span><strong><span>水印</span></strong><span>，如果能搜索到画师在其主页或者相册翻看或搜索关键词说不定就可以直接找到；</span></li><li><span>如果图片来源是 Twitter、微博之类的社交平台请注意</span><strong><span>一定不要打扰作者</span></strong><span>；</span></li><li><strong><span>官方立绘 / 商业用图</span></strong><span>（如印制在 T 恤和吧唧（徽章）上的插画）很可能是没有高清版本的，这是因为涉及到商业合作的规定，但是这类图片可以通过搜索到到的作品名 / 作者的信息，外加相关活动（比如初音未来的官方图可以试试看加上 Piapro Blog 或者 CFM (Crypton Future Media) 一类的关键词），就很容易找到相关商品情报；</span></li><li><span>部分网站可能需要</span><strong><span>代理</span></strong><span>；</span></li><li><span>建议学习</span><strong><span>图片编辑处理</span></strong><span>基础，至少掌握</span><strong><span>去除黑边</span></strong><span>和</span><strong><span>纠正视角</span></strong><span>一类技能（尤其对歪着拍、对着屏幕拍的图有比较大的作用）。</span></li></ul><h3 id='相关缩写'><span>相关缩写</span></h3><ul><li><span>pid 通常指代最大的插画交流站 </span><a href='https://www.pixiv.net/'><span>Pixiv</span></a><span> 的作品 ID，表现为网址加 </span><code>/artwork/[pid]</code><span>，如 </span><code>pid = 123456</code><span> 的实际网页地址为 </span><code>https://www.pixiv.net/artworks/123456</code><span>；</span></li><li><span>DA id 通常指代在西方很流行的艺术交流网站 </span><a href='https://www.deviantart.com/'><span>DeviantArt</span></a><span> 的作品 ID，表现为网址后缀加 </span><code>/view/[DA id]</code><span>，如 </span><code>DA id = 123456</code><span> 的实际网页地址为 </span><code>https://deviantart.com/view/123456</code><span>；</span></li><li><span>uid 通常指代各类网站的用户 ID（User ID）；</span></li></ul><h3 id='相关工具'><span>相关工具</span></h3><p><span>常用的逆向搜图引擎有  </span><a href='https://saucenao.com/'><span>SauceNAO</span></a><span>、</span><a href='https://yandex.com/images/'><span>Yandex</span></a><span>、</span><a href='https://www.google.com.hk/imghp?hl=zh-TW'><span>Google</span></a><span>、</span><a href='https://graph.baidu.com/pcpage/index?tpl_from=pc'><span>百度</span></a><span>（不好用）、</span><a href='https://ascii2d.net/'><span>Ascii2D</span></a><span>、</span><a href='https://tineye.com/'><span>Tineye</span></a><span>、</span><a href='https://www.bing.com/visualsearch?mkt=zh-CN'><span>Bing</span></a><span> 等；浏览器插件 </span><a href='https://saucenao.com/tools/'><span>Image Search Options</span></a><span>（来自 SauceNAO，Firefox 版比 Chrome 版支持更多引擎）和 </span><a href='http://www.pullywood.com/ImageAssistant/'><span>Image Assistant</span></a><span>；如果查询到的原图清晰度不够满意需要放大时，还可以使用 </span><a href='https://github.com/nagadomi/waifu2x'><span>Waifu 2x</span></a><span> 或较新版本 </span><a href='https://www.adobe.com/products/photoshop.html'><span>Adobe Photoshop</span></a><span> 或其他支持深度学习重采样的工具；如果页面被取消可以试试 </span><a href='http://web.archive.org/'><span>Web Archive</span></a><span> 等页面存档工具；有时候涉及印制在商品上面的内容的搜寻，淘宝的拍立淘和微信的物品识别也可以尝试。</span></p><p><img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/SP1_0_meme.PNG" referrerpolicy="no-referrer" alt="Meme1"></p><p><span>以下为各个常用搜索引擎的纯主观使用体验：</span></p><ul><li><strong><span>SauceNAO</span></strong><span>：主要专注 Pixiv（实际搜索范围可能涵盖了二三十个插图站，包括上面提到的 DeviantArt 以及半次元、Twitter 等平台），能直接给出作者和作品 ID，非常强大（需要注意半次元前段时间改版过，链接可能断开，只能通过作者信息查找，工作量会比较大），但如果只有局部图片很可能无功而返，适合查询末期，找作者找原图；</span></li><li><strong><span>Google</span></strong><span>：老大哥了，只要是存在 Google 爬得到的地方基本都能挖出来，但是由于十分不专一很容易造成出现海量信息却很难找到需要的内容，经常出 Twitter、YouTube 和 Pinterest 的内容，使用搜索栏限定的帮助也可以提升识别率，适合搜寻初期；</span></li><li><strong><span>Yandex</span></strong><span>：毛子做的搜索引擎，在搜索二次元图片方面远胜于 Google，基本上是我第一考虑的搜索网站，甚至对极端模糊、只有一个小角和临摹的图都可能适用，同样使用搜索栏限定的帮助也可以提升识别率，适合搜寻初期；</span></li><li><strong><span>百度</span></strong><span>：拉跨，别想不通被它气，除非是国内作者，有时候也会在一些抱枕、海报方面识别出原图；</span></li><li><strong><span>Bing</span></strong><span>：也拉，这个连上面那个国内作者的优势都没有；</span></li><li><strong><span>Tineye</span></strong><span>：主要用于查大图，很多人都在推荐但是在查找二次元大图实际却非常不好用，甚至我就从来没查出来过……；</span></li><li><strong><span>Ascii2D</span></strong><span>：仅适用于二次元识图，很玄学，本身并不好用，很容易查出来手绘的压根没关系的图，但是他的 “色合检索” 和 “特征检索” 偶尔也能带来惊喜（极少数情况，但可以作为补充使用）；</span></li><li><strong><span>IQDB</span></strong><span>：一个整合类网站，整合了上述很多网站但是并不好用；</span></li><li><strong><span>WhatAnime</span></strong><span>：适用于依靠截图搜动画番组，不适用于搜绘图（PV 也很大几率搜不了）。</span></li></ul><p><span>插件 </span><strong><span>Image Search Options</span></strong><span> 就整合了上述这些网站，可以直接在感兴趣的图右键查询。注意 Firefox 版才是更完整的版本，另外部分网站使用了防盗链对图片链接进行了限制，所以不能直接调用 URL 来查询图片，只能把图片下载下来再上传到对应的搜索站。</span></p><p><img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/SP1_0_iso.png" referrerpolicy="no-referrer" alt="ISO"></p><p>&nbsp;</p><h2 id='情景展示'><span>情景展示</span></h2><h3 id='1-低分辨率完整图片搜索原图和作者'><span>1. 低分辨率完整图片搜索原图和作者</span></h3><blockquote><p><span>工具：SauceNAO</span></p></blockquote><p><span>最简单的情况，直接搜索就完事了，这种方法通常用于查找图片的最末环节。</span></p><p><img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/SP1_1_saucenao_page.png" referrerpolicy="no-referrer" alt="SauceNAO"></p><p><span>如果发现 Pixiv 的页面已经被删除，可能是画师本人觉得是黑历史删除了，也可能是找到了因为冒充作者上传而被官方处理掉的链接。这时还想查到原图，如果是后者重复几次搜索即可，如果是前者就可能需要使用类似于网页存档的网站比如 Web Archive 来回溯（不一定成功但是可以试试），或者找找有没有壁纸网站（如 yande.re 等）收录。</span></p><p><span>下面的图片就很容易看得到 这张图在 Pixiv 的出处，包含了 Pixiv ID 和作者 “【hews】”（都是可以直接点击的超链接）。</span></p><p><img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/SP1_1_saucenao.png" referrerpolicy="no-referrer" alt="SauceNAO2"></p><p><strong><span>局限：</span></strong><span>如果图片是被截取 / 拍摄等情况此方法不适用，一般仅作为搜到完整图片后查找作者和发布源的方式。（参见情景二）</span></p><h3 id='2-残缺不全的图寻找原图'><span>2. 残缺不全的图寻找原图</span></h3><p><span>这类情景主要针对图片是被部分截取、拍摄到的，甚至是临摹得到的…… 思路是首先是将图识别为完整无严重偏色版本的，再使用前述方法（如 SauceNAO 等），或者进行多次识别（可能会找到临摹图，套娃式地使用不同引擎反复识别有助提高准确率）。这其实就是最常见的情况，灵活使用这系列方法其实就能解决绝大部分问题了。</span></p><blockquote><p><span>工具：Yandex、Google、百度、Ascii2D 等搜索平台 – SauceNAO</span></p></blockquote><p><span>案例：曾经的来自贴吧的求助贴</span></p><p><img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/SP1_2_Original.png" referrerpolicy="no-referrer" alt="tieba"></p><p><span>这张图直接使用 SauceNAO 可以发现完全没有结果，用 Google 的效果并不好，而 Yandex 则比较轻松搜到：</span></p><p><span>（注：网络图片每天都在爆炸式地增长，这导致这个流程是我在 2020 年尝试的，今年重新整理的时候发现 Yandex 也很难找到这张图的原图了，所以查图这个事情也是有很大运气成分的）</span></p><p><img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/SP1_2_yandex.png" referrerpolicy="no-referrer" alt="Yandex"></p><p><span>然而这还只是个分辨率很低的 Pinterest 上的图，此时可以 “套娃式搜索”（比如我又用了一次 Google）。这次就搜到了 Tumblr 上的帖子，得到关键信息 “Snow Miku Skytown Summer”，作者是 “sohin_3”（再查一下就知道这位是画师 so 品了）</span></p><p><img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/SP1_2_yandex2.png" referrerpolicy="no-referrer" alt="Yandex2"></p><p><span>因为有初音的版权方 CFM (Crypton Future Media) 的版权水印，所以可以尝试搜索作者 + “Piapro”（即 CFM 旗下的作品投稿站也是官方博客站）。这样就大功告成了！</span></p><p><img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/SP1_2_google.png" referrerpolicy="no-referrer" alt="Google"></p><p><img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/SP1_2_official.png" referrerpolicy="no-referrer" alt="off"></p><p><span>如果像这个画廊界面禁用了右键或者是不能使用图片另存为指令时，可以使用 Chrome 的插件 </span><strong><span>图片助手（ImageAssistant）</span></strong><span>提取。注意这么做可能会有版权问题，请谨慎使用。</span></p><p><img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/SP1_2_ia.png" referrerpolicy="no-referrer" alt="IA"></p><h3 id='3-只记得色彩和大概画面'><span>3. 只记得色彩和大概画面</span></h3><p><span>这类场景主要针对大范围模糊的、有大量遮蔽物等容易使电脑产生误判的情况，但是由于是用语言描述，需要一定的英文基础，图片也不能是太冷门的。</span></p><blockquote><p><span>工具：Yandex、Google、百度等搜索平台  – SauceNAO</span></p></blockquote><p><span>案例：贴吧的求助帖（找不到原贴了，只有当时保存下来的截图，为了保护当事人隐私另外加了一层马赛克）</span></p><p><img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/SP1_3_Original.png" referrerpolicy="no-referrer" alt="Original"></p><p><span>这次想找如图初音在冬天打红伞走的绘图，这个清晰度和干扰程度很大概率是不能以图搜图搜出来的，此时使用关键词可以是：“(Hatsune) Miku”, “Winter”, “Red Umbrella”, (“Illustration”)。这样就很顺利找到了无干扰的图片了，然后再通过 SauceNAO 就可以得到作者信息和 pid 了。</span></p><p><img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/SP1_3_google2.png" referrerpolicy="no-referrer" alt="Google"></p><p><span>另一个案例：以前很多人求这张图。由于初音的单马尾形象实在不是很多，所以这张图其实只需要在百度直接搜索 “初音”、“单马尾” 就可以找到。</span></p><p><img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/SP1_3_eg2.png" referrerpolicy="no-referrer" alt="Baidu"></p><h3 id='4-周边无原画）和视频截图'><span>4. 周边（无原画）和视频截图</span></h3><p><span>思路大体和上面情景 2、3 类似，反复用不同引擎进行搜寻可能能找到相关答案。但查找这类问题对宅文化知识水平要求更高，传统的搜索软件不一定能很顺利地解决问题，所以只能依靠大量的积累和理解，甚至可能需要对日语（当查找的内容是和日本动漫相关时）和日本文化、网络用语的了解。当然个人的积累自然比不上很多人的积累，实在找不到的话适当地求助一下相关圈子的大手子也未尝不可。</span></p><p><span>案例：贴吧的求助帖</span></p><p><img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/SP1_4_Original.png" referrerpolicy="no-referrer" alt="Ft"></p><p><span>这图如果是有一定的资历的术术人可能都看得出来是世嘉的 “Project Diva（歌姬计划）” 系列 F / FT 或同时代的模型，所以很有可能是个游戏或者宣传 PV 的截图。</span></p><p><span>果然，Yandex 不仅识别出了图片属于 “歌姬计划 F 2nd”，还给了官方的视频链接（这种时候只要是官方视频基本都不会出错）。</span></p><p><img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/SP1_4_Yandex.png" referrerpolicy="no-referrer" alt="Yandex"></p><p><img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/SP1_4_Yandex2.png" referrerpolicy="no-referrer" alt="Yandex2"></p><p><span>其实后来我也用 SauceNAO 试了一下，也识别出了 DA 站上的截图，同样能得到出自 PD F 2nd 的信息。</span></p><p><img src="https://cdn.jsdelivr.net/gh/Nikucyan/Share/Images/SP1_4_saucenao.png" referrerpolicy="no-referrer" alt="SauceNAO"></p><p>&nbsp;</p><p><img src="https://i.creativecommons.org/l/by/4.0/88x31.png" referrerpolicy="no-referrer" alt="知识共享许可协议"><span> 本文章采用</span><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><span>知识共享署名 4.0 国际许可协议</span></a><span> (CC-BY-4.0) 进行许可。</span></p><p>&nbsp;</p></div></div>
+
+<script>(function(){var e=document.body.parentElement,t=[],n=null,i=document.body.classList.contains("typora-export-collapse-outline"),r=function(e,t,n){document.addEventListener(e,function(e){if(!e.defaultPrevented)for(var i=e.target;i&&i!=this;i=i.parentNode)if(i.matches(t)){!1===n.call(i,e)&&(e.preventDefault(),e.stopPropagation());break}},!1)};function o(){return e.scrollTop}r("click",".outline-expander",function(e){var t=this.closest(".outline-item-wrapper").classList;return t.contains("outline-item-open")?t.remove("outline-item-open"):t.add("outline-item-open"),d(),!1}),r("click",".outline-item",function(e){var t=this.querySelector(".outline-label");if(location.hash="#"+t.getAttribute("href"),i){var n=this.closest(".outline-item-wrapper").classList;n.contains("outline-item-open")||n.add("outline-item-open"),c(),n.add("outline-item-active")}});var a,s,l=function(){var e=o();n=null;for(var i=0;i<t.length&&t[i][1]-e<60;i++)n=t[i]},c=function(){document.querySelectorAll(".outline-item-active").forEach(e=>e.classList.remove("outline-item-active")),document.querySelectorAll(".outline-item-single.outline-item-open").forEach(e=>e.classList.remove("outline-item-open"))},d=function(){if(n){c();var e=document.querySelector('.outline-label[href="#'+(CSS.escape?CSS.escape(n[0]):n[0])+'"]');if(e)if(i){var t=e.closest(".outline-item-open>ul>.outline-item-wrapper");if(t)t.classList.add("outline-item-active");else{for(var r=(e=e.closest(".outline-item-wrapper")).parentElement.closest(".outline-item-wrapper");r;)r=(e=r).parentElement.closest(".outline-item-wrapper");e.classList.add("outline-item-active")}}else e.closest(".outline-item-wrapper").classList.add("outline-item-active")}};window.addEventListener("scroll",function(e){a&&clearTimeout(a),a=setTimeout(function(){l(),d()},300)});var u=function(){s=setTimeout(function(){!function(){t=[];var e=o();document.querySelector("#write").querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(n=>{var i=n.getAttribute("id");t.push([i,e+n.getBoundingClientRect().y])})}(),l(),d()},300)};window.addEventListener("resize",function(e){s&&clearTimeout(s),u()}),u()})();</script></body>
+</html>
